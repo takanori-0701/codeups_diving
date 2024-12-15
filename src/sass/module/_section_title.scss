@@ -1,0 +1,22 @@
+@use "global" as *;
+.section_title {
+  font-family: $en-font-family;
+  color: $green;
+  text-align: center;
+}
+
+.section_title__en {
+  font-size: rem(40);
+  line-height: 1;
+  padding-bottom: rem(8);
+  font-weight: $normal;
+}
+
+.section_title__en::first-letter {
+  color: $greenaccent;
+}
+.section_title__jp {
+  font-size: rem(12);
+  line-height: 1.5;
+  color: $greenaccent;
+}

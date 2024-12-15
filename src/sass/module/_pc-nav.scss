@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.pc-nav {
+    display: none;
+    @include mq("md") {
+        display: block;
+    }
+}
+.pc-nav__items {
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+    color: $white
+}
+.pc-nav__item {
+    font-size: rem(18);
+    line-height: 1;
+    font-family: $en-font-family;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+.pc-nav__item a{
+    display: flex;
+    flex-direction: column;
+}
+.pc-nav__item a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: rem(1);
+    background: $white;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+.pc-nav__item a:hover::after {
+    transform: scale(1, 1);
+}
+.pc-nav__item span{
+    font-size: rem(10);
+    line-height: 1;
+    font-family: $base-font-family;
+    line-height: 1.6;
+    padding-top: 4px;
+}

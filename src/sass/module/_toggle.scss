@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.toggle {
+    position: relative;
+    width: rem(30);
+    height: rem(30);
+    z-index: 100;
+}
+
+.toggle span {
+    background-color: $white;
+    position: absolute;
+    width: inherit;
+    height: rem(3);
+    transition: 0.3s;
+}
+.toggle span:nth-child(1) {
+    top: 15%;
+}
+.toggle span:nth-child(2) {
+    top: 51%;
+    
+}
+.toggle span:nth-child(3) {
+    top:85%;     
+}
+
+.toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+
+}
+.toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px); 
+}
+
+
