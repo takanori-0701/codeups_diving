@@ -1,0 +1,65 @@
+@use "global" as *;
+    
+.information {
+  background-color: $green2;
+  padding: rem(84) 0;
+  @include mq("md") {
+    padding: rem(100) 0 rem(36);
+  }
+}
+
+.information__title {
+  margin-bottom: rem(27);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
+}
+
+.information__content {
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+.information__img {
+  margin-bottom: rem(21);
+  width: 100%;              // 親要素に合わせて幅を100%に拡張
+  height: auto;             // 必要に応じて高さを調整
+  aspect-ratio: 345 / 227;     // アスペクト比を指定（例：16:9）
+  object-fit: cover;        // 親要素に合わせてフィットし、アスペクト比を保持
+  @include mq("md") {
+    width: 50%;
+    margin-bottom: rem(0);
+    margin-bottom: rem(40);
+  }
+}
+
+.information__textbox {
+  @include mq("md") {
+    padding-left: rem(45);
+    margin-top: rem(-50);
+    width: 50%;
+  }
+}
+
+.information__textbox-title {
+  font-size: rem(20);
+  font-weight: $bold;
+  margin-bottom:rem(8);
+  border-bottom: rem(1) solid $greenaccent;
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+.information__text {
+  font-size: rem(16);
+  margin-bottom: rem(40);
+}
+
+.information__btn {
+  display: flex;
+  justify-content: center;
+}

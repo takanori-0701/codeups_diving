@@ -1,0 +1,129 @@
+@use "global" as *;
+    
+.footer {
+  background-color: $greenaccent;
+  padding: rem(48) 0 rem(56);
+  @include mq("md") {
+    padding: rem(80) 0;
+  }
+}
+
+.footer__logo {
+  margin-bottom: rem(38);
+  @include mq("md") {
+    display: flex;
+    margin-bottom: rem(5);
+  }
+}
+
+.footer__logobox {
+  margin-bottom: rem(16);
+  @include mq("md") {
+    margin-bottom: 0;
+  }
+}
+
+.footer__logo--link {
+  width: rem(120);
+  @include mq("md") {
+    margin-bottom: rem(16);
+    width: rem(200);
+  }
+}
+
+.footer__sns {
+  display: flex;
+  align-items: flex-end;
+  @include mq("md") {
+    margin-left: rem(40);
+    margin-bottom: rem(20);
+  }
+}
+
+.footer__Facebook--link {
+  width: rem(25);
+  @include mq("md") {
+    width: rem(32);
+  }
+}
+
+.footer__Instagramlogo--link {
+  width: rem(25);
+  margin-left: rem(16);
+  @include mq("md") {
+    width: rem(32);
+  }
+}
+
+.footer__nav {
+  display: flex;
+  gap: rem(18);
+  color: $white;
+  font-size: rem(16);
+  // justify-content: center;
+  @include mq("md") {
+    gap: rem(120);
+  }
+}
+
+.footer__left {
+  gap: rem(120);
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.footer__list {
+  margin-bottom: rem(34);
+}
+.footer__list li{
+  margin-bottom: rem(18);
+  position: relative; // 基準を設定
+  padding-left: rem(22); // テキストを右にずらす
+}
+.footer__list li:first-child::before {
+  content: '';
+  display: block;
+  position: absolute; // テキストの左側に配置
+  top: 10%; // 垂直中央に配置
+  left: 0; // 左端から開始
+  width: rem(18); // 画像の幅
+  height: rem(18); // 画像の高さ
+  background-image: url('../images/common/starfish.svg'); // 画像を設定
+  background-size: cover; // 画像をリサイズ
+  background-repeat: no-repeat; // 繰り返しを防止
+}
+.footer__list li:first-child {
+  font-weight: $bold;
+}
+
+.footer__right {
+  gap: rem(120);
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.footer__copyright {
+  font-size: rem(12);
+  font-family: $en-font-family;
+  color: $white;
+  text-align: center;
+  @include mq("md") {
+    font-size: rem(14);
+    margin-top: rem(40);
+  }
+}
+
+.br-sp {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.lh {
+  line-height: 1.3;
+  @include mq("md") {
+    line-height: 1.5;
+  }
+}

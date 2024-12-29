@@ -2,11 +2,6 @@
 .main-visual {
     position: relative;
     height: 100vh;
-    // background: url(../images/common/top_img_01.jpg) no-repeat center center / cover;
-    // background-image: url(../assets/images/common/top_img_01.jpg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-color: $green2;
 }
 
 .main-visual__inner {
@@ -29,8 +24,10 @@
     font-family: $fb-font-family;
     font-weight: $normal;
     line-height: 1.25;
+    margin-left: 21px;
     @include mq("md") {
         font-size: rem(80);
+        margin-left: rem(43);
     }
 }
 
@@ -40,7 +37,7 @@
     font-weight: $regular;
 }
 
-.swiper img{
+.main-visual img{
     height: 100vh;
     object-fit: cover;
 }

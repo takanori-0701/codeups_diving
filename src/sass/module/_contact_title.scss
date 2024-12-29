@@ -1,0 +1,30 @@
+@use "global" as *;
+    
+.contact_title {
+  font-family: $en-font-family;
+  color: $green;
+  text-align: center;
+}
+
+.contact_title__en {
+  font-size: rem(80);
+  line-height: 1;
+  font-weight: $normal;
+  margin-left: -8px;
+  @include mq("md") {
+    margin-left: 0;
+  };
+}
+
+.contact_title__en::first-letter {
+  color: $greenaccent;
+}
+.contact_title__jp {
+  font-size: rem(12);
+  line-height: 1.5;
+  color: $greenaccent;
+  margin-top: rem(-5);
+  @include mq("md") {
+    margin-top: rem(0);
+  };
+}

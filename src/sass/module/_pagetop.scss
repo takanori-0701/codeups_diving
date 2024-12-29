@@ -1,0 +1,65 @@
+@use "global" as *;
+    
+.pagetop {
+  width: rem(48);
+  height: rem(48);
+  border-radius: 50%;
+  border: 1px solid $greenaccent;
+  background: $white;
+  position: fixed;
+  right: rem(15);
+  bottom: rem(30);
+  opacity: 0.6;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
+  z-index: 500;
+  display: flex; /* 矢印を中央揃えにするため追加 */
+  justify-content: center; /* 水平方向中央揃え */
+  align-items: center; /* 垂直方向中央揃え */
+  @include mq("md") {
+    width: rem(80);
+    height: rem(80);
+    right: rem(20);
+    bottom: rem(30);
+  }
+}
+
+.pagetop a {
+  display: block;
+  width: rem(80); /* 親要素の幅と高さに合わせる */
+  height: rem(80);
+  position: relative; /* 擬似要素の基準として使用 */
+  text-decoration: none;
+}
+
+/* 矢印の上部分（横棒） */
+.pagetop a::before {
+  content: "";
+  position: absolute;
+  border-bottom: rem(1.5) solid $greenaccent;
+  border-right: rem(1.5) solid $greenaccent;
+  width: rem(28);
+  height: 0; /* 高さは不要 */
+  top: 50%; /* 矢印を中央に配置 */
+  left: 50%; /* 横方向で中央揃え */
+  transform: translate(-50%, -50%) rotate(-90deg); /* 中央揃えと90度回転 */
+  @include mq("md") {
+    width: 2.5rem;
+  }
+}
+
+/* 矢印の下部分（短い棒） */
+.pagetop a::after {
+  content: "";
+  position: absolute;
+  border-bottom: rem(1.5) solid $greenaccent;
+  border-right: rem(1.5) solid $greenaccent;
+  width: 0.4rem;
+  height: 0; /* 高さは不要 */
+  top: 48%; /* 矢印を中央に配置 */
+  left: 44%;
+  transform: translate(-50%, calc(-100% - 0.5rem)) rotate(-45deg); /* 中央揃えと45度回転 */
+  @include mq("md") {
+    top: 42%; /* 矢印を中央に配置 */
+    width: 0.8rem;
+  }
+}

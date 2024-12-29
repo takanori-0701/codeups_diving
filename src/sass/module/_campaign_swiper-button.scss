@@ -1,0 +1,77 @@
+@use "global" as *;
+    
+.campaign_swiper-button {
+  display: none;
+  @include mq("md") {
+    justify-content: right;
+    display: flex;
+  }
+}
+
+.campaign_swiper-button__inner {
+  position: relative;
+  top:rem(-45);
+  width: rem(261);
+  left: rem(10);
+}
+
+/* 左矢印ボタン */
+.swiper-button-prev {
+  position: absolute; /* 親要素基準で配置 */
+  top: 50%; /* 矢印を垂直方向で中央揃え */
+  left: rem(10); /* 左端から適切な距離を設定 */
+  transform: translateY(-49%); /* 完全な中央揃え */
+  background: $white;
+  border: 1px solid #408F95;
+  border-radius: 50%;
+  width: rem(80);
+  height: rem(80);
+}
+
+/* 右矢印ボタン */
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: rem(10); /* 右端から適切な距離を設定 */
+  transform: translateY(-50%);
+  background: $white;
+  border: 1px solid #408F95;
+  border-radius: 50%;
+  width: rem(80);
+  height: rem(80);
+}
+
+/* 矢印アイコン */
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  content: "";
+  position: absolute;
+  border-bottom: rem(1.5) solid $greenaccent; /* 横線 */
+  border-right: rem(1.5) solid $greenaccent; /* 縦線 */
+  top:rem(42);
+  width: 2.5rem;
+}
+
+/* 左矢印アイコン */
+.swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  border-bottom: rem(1.5) solid $greenaccent;
+  border-right: rem(1.5) solid $greenaccent;
+  right: rem(48);
+  top: rem(38);
+  transform: rotate(-45deg);
+  width: 0.8rem;
+}
+
+/* 右矢印アイコン（反転） */
+.swiper-button-next::after {
+  content: "";
+  position: absolute;
+  border-bottom: rem(1.5) solid $greenaccent;
+  border-right: rem(1.5) solid $greenaccent;
+  left: rem(48);
+  top: rem(38);
+  transform: rotate(-135deg);
+  width: 0.8rem;
+}

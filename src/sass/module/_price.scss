@@ -1,0 +1,98 @@
+@use "global" as *;
+    
+.price {
+  background-color: $green2;
+  padding: rem(83) 0 rem(81);
+  @include mq("md") {
+    padding: rem(101) 0;
+    position: relative;
+  }
+
+}
+.price::before {
+  @include mq("md") {
+    content: '';
+    position: absolute;
+    bottom: rem(60);
+    left: calc(50% - 43.23%);
+    width: rem(437);
+    height: rem(201);
+    background-image: url(../images/common/price_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;
+    opacity: 0.5;   
+  }
+}
+
+.price__title {
+  margin-bottom: rem(29);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
+}
+
+.price__content {
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
+.price__img {
+  width: 100%;              // 親要素に合わせて幅を100%に拡張
+  height: auto;             // 必要に応じて高さを調整
+  aspect-ratio: 345 / 227;     // アスペクト比を指定（例：16:9）
+  margin-bottom: rem(37);
+  @include mq("md") {
+    width: 50%;
+    margin-left: rem(93);
+    display: inline-table;
+    margin-bottom: rem(40);
+  }
+}
+
+.price__text {
+  font-size: rem(14);
+  line-height: 1.714285714285714;
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: 1.5;
+    width: 50%;
+  }
+}
+
+.price__list-title {
+  font-size: rem(16);
+  font-weight: $bold;
+  color: #0D2936;
+  border-bottom: 1px solid #408F95;
+  padding-bottom: rem(1);
+  margin-bottom: rem(8);
+  @include mq("md") {
+    padding-bottom: rem(4);
+  }
+}
+
+.price__list-text {
+  margin-bottom: rem(40);
+}
+
+.price__list-text li{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(8);
+  @include mq("md") {
+    line-height: 1.49;
+  }
+}
+
+.price__btn {
+  display: flex;
+  justify-content: center;
+  @include mq("md") {
+    margin-top: rem(37);
+  }
+}
+

@@ -1,0 +1,131 @@
+@use "global" as *;
+
+
+.campaign-card {
+    background-color: $white;
+    box-shadow: 0 0 8px gray;
+    width: rem(280);
+    @include mq("md") {
+        width: rem(333);
+    }
+}
+
+.campaign-card__img {
+    position: relative;
+}
+
+.campaign-card__img::before {
+    content: "";
+    display: block;
+    padding-top: 66.955%;
+}
+
+.campaign-card__img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.campaign-card__body {
+    padding: rem(16) rem(16) rem(16);
+    @include mq("md") {
+        padding: rem(24) rem(16) rem(30);
+    }
+}
+
+.campaign-card__category {
+    border-bottom: 1px solid $greenaccent;
+}
+
+.campaign-card__category--tab {
+    font-size: rem(12);
+    font-weight: 500;
+    border: rem(1) solid $greenaccent;
+    padding: rem(4) rem(12);
+    line-height: 1.7;
+    display: inline-block;
+    color: $greenaccent;
+    @include mq("md") {
+        padding: rem(6) rem(16);
+    }
+}
+
+.campaign-card__category--title {
+    font-size: rem(16);
+    font-weight: $bold;
+    color: $black;
+    margin-top: rem(4);
+    margin-bottom: rem(9);
+    @include mq("md") {
+        color: $greenaccent;
+        font-size: rem(16);
+    }
+}
+
+.campaign-card__text {
+    text-align: center;
+    font-size: rem(14);
+    margin-top: rem(10);
+    line-height: 1.5;
+    @include mq("md") {
+        font-size: rem(16);
+        margin-top: rem(15);
+        line-height: 1.3;
+    }
+}
+
+.campaign-card__price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: $fb-font-family;
+    font-weight: $bold;
+}
+
+.campaign-card__price--up {
+    font-size: rem(20);
+    margin-right: rem(16);
+    margin-bottom: 6px;
+    text-decoration: line-through; /* 取り消し線を適用 */
+    text-decoration-color: $red; /* 線の色を赤に設定 */
+    text-decoration-thickness: 3px; /* 線の太さを 2px に設定 */
+    line-height: 1.3;
+    @include mq("md") {
+        font-size: rem(24);
+        margin-right: rem(24);
+    }
+}
+
+.campaign-card__price--down {
+    font-size: rem(32);
+    color: $greenaccent;
+    line-height: 1.5;
+    @include mq("md") {
+        font-size: rem(40);
+    }
+}
+
+.swiper-slide {
+    width: auto;
+}
+
+.campaign-swiper {
+    margin-bottom: rem(19);
+    @include mq("md") {
+        margin-bottom: rem(60);
+    }
+}
+
+.campaign-swiper__item {
+    margin-bottom: rem(16);
+}
+
+.campaign-swiper__right {
+    margin-right: calc(51% - 50vw); /* 親幅を超えるデザインを実現 */
+    padding-bottom: rem(5); 
+}

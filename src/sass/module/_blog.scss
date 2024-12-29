@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.blog {
+  padding-top: rem(82);
+  @include mq("md") {
+    position: relative;
+    padding-top: rem(100);
+  }
+}
+.blog::after {
+  @include mq("md") {
+    content: '';
+    position: absolute;
+    top: rem(24);
+    left: calc(50% - 43.23%);
+    width: rem(437);
+    height: rem(201);
+    background-image: url(../images/common/blog_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;   
+  }
+}
+
+.blog::before {
+  @include mq("md") {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px; /* 固定の高さを指定 */
+    background-image: url(../images/common/blogbaci_mag.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -2;   
+  }
+
+}
+.blog__title {
+  @include mq("md") {
+    padding-bottom: rem(52);
+  }
+}
+
+.blog__btn {
+  display: flex;
+  justify-content: center;
+} 
+
+

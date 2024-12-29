@@ -6,10 +6,13 @@
 }
 
 .section_title__en {
-  font-size: rem(40);
+  font-size: rem(32);
   line-height: 1;
   padding-bottom: rem(8);
   font-weight: $normal;
+  @include mq("md") {
+    font-size: rem(40);
+  };
 }
 
 .section_title__en::first-letter {

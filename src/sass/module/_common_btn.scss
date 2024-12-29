@@ -13,20 +13,21 @@
   padding: rem(16) 0;
   padding-left: rem(40);
   line-height: 1.57;
-  // box-shadow: 4px 4px 0 -1px #fff, 4px 4px 0 0 $greenaccent;
-  // overflow: hidden;
+  margin-left: -6px;
   z-index: 1;
 }
 .common_btn::before {
-  border: 0.0625rem solid #408F95;
-    bottom: 0;
-    content: "";
-    height: rem(58);
+  position: absolute;
+  top: 0.2rem;
+  z-index: -2;
+  border: 1px solid #408f95;
+  bottom: -0.25rem;
+  content: "";
+  left: 0.25rem;
     position: absolute;
-    right: -7px;
-    top: 3px;
-    width: rem(206);
-    z-index: -2;
+    right: -0.25rem;
+    transition: 0.3s;
+    z-index: -1;
 }
 
 .common_btn__arrow {
@@ -35,7 +36,7 @@
   margin: auto;
   top: 0;
   bottom: 0;
-  right: rem(38);
+  right: rem(43);
   width: rem(40);
   height: rem(7);
   bottom: rem(6);
@@ -47,38 +48,6 @@
   border-bottom: rem(1) solid $greenaccent; // ホバー時に緑色に変更
   border-right: rem(1) solid $greenaccent; // ホバー時に緑色に変更
 }
-// .common_btn::before {
-//   content: "";
-//   position: absolute;
-//   margin: auto;
-//   top: 0;
-//   bottom: 0;
-//   right: rem(38);
-//   width: rem(40);
-//   height: rem(7);
-//   bottom: rem(6);
-//   border-bottom: rem(1) solid $white;
-//   border-right: rem(1) solid $white;
-//   transform: skew(45deg);
-// }
-// .common_btn::before {
-//   position: relative;
-//   font-size: rem(14);
-//   color: $white;
-//   font-family: $en-font-family;
-//   font-weight: $normal;
-//   display: inline-block;
-//   width: rem(202);
-//   border: rem(1) solid $greenaccent;
-//   background: $greenaccent;
-//   padding: rem(16) 0;
-//   padding-left: rem(40);
-//   line-height: 1.57;
-//   // box-shadow: 4px 4px 0 -1px #fff, 4px 4px 0 0 $greenaccent;
-//   overflow: hidden;
-//   z-index: 1;
-// }
-
 
 .common_btn::after {
   background: #ffffff;
