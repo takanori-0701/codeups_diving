@@ -106,13 +106,16 @@
 
 .footer__copyright {
   font-size: rem(12);
-  font-family: $en-font-family;
   color: $white;
   text-align: center;
   @include mq("md") {
     font-size: rem(14);
     margin-top: rem(40);
   }
+}
+
+.footer__copyright samp {
+  font-family: "Gotu", sans-serif;
 }
 
 .br-sp {
