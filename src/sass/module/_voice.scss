@@ -1,8 +1,8 @@
 @use "global" as *;
     
 .voice {
-  padding: rem(85) 0;
-  @include mq("md") {
+  padding: rem(88) 0 rem(82);
+    @include mq("md") {
     padding: rem(143) 0;
     position: relative;
   }

@@ -1,17 +1,15 @@
 @use "global" as *;
     
 .voice-cards{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
   @include mq("md") {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: rem(40);
-    margin-bottom: rem(40);
+    margin-bottom: rem(80);
   }
 }
 
 .voice-cards a{
-  margin-bottom: rem(39);
   @include mq("md") {
+    display: flex;
   }
 }

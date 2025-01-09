@@ -2,7 +2,7 @@
 
 .toggle {
     position: relative;
-    width: rem(40);
+    width: rem(32);
     height: rem(40);
     z-index: 100;
 }
@@ -15,25 +15,26 @@
     transition: 0.3s;
 }
 .toggle span:nth-child(1) {
-    top: 18%;
+    top: 19%;
 }
 .toggle span:nth-child(2) {
-    top: 51%;
+    top: 49%;
     
 }
 .toggle span:nth-child(3) {
-    top:78%;     
+    top:79%;     
 }
 
 .toggle.open span:nth-child(1) {
-    transform: rotate(37deg) translate(11px, 8px);
-
+    transform: rotate(38deg) translate(4px, 13px);
+    width: rem(40);
 }
 .toggle.open span:nth-child(2) {
     opacity: 0;
 }
 .toggle.open span:nth-child(3) {
-    transform: rotate(-37deg) translate(9px, -6px); 
+    transform: rotate(-37deg) translate(3px, -12px); 
+    width: rem(40);
 }
 
 

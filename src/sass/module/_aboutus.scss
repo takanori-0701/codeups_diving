@@ -19,7 +19,7 @@
     background-size: cover;
     background-position: center;
     z-index: 500;
-    opacity: 0.5;   
+    // opacity: 0.5;   
     }
 }
 
@@ -39,7 +39,7 @@
     position: relative;
     width: 100%;
     aspect-ratio: 345 / 212;
-    margin-bottom: rem(42);
+    margin-bottom: rem(41);
     @include mq("md") {
         margin-bottom: rem(52);
     }
@@ -88,6 +88,7 @@
         line-height: 1.25;
         color: white;
         width: 50%;
+        white-space: nowrap;
     }
     
 }

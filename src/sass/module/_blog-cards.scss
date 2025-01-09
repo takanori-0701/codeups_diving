@@ -2,10 +2,15 @@
     
 .blog-cards {
   padding: 0 rem(7);
+  margin-bottom: rem(-3);
   @include mq("md") {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: rem(40);
     padding: 0;
+    margin-bottom: rem(80);
   }
-}     
+} 
+
+.blog-cards a {
+  display: flex;
+}

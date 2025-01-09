@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .campaign {
-    padding: rem(43) 0 rem(86);
+    padding: rem(43) 0 rem(87);
     @include mq("md") {
         padding: rem(120) 0 rem(143);
     }

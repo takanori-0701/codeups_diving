@@ -16,24 +16,31 @@
 }
 
 .information__content {
+    max-width: rem(600);
+    width: 100%;
+    margin: 0 auto;
   @include mq("md") {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
 
 .information__img {
   margin-bottom: rem(21);
-  width: 100%;              // 親要素に合わせて幅を100%に拡張
-  height: auto;             // 必要に応じて高さを調整
-  aspect-ratio: 345 / 227;     // アスペクト比を指定（例：16:9）
-  object-fit: cover;        // 親要素に合わせてフィットし、アスペクト比を保持
   @include mq("md") {
     width: 50%;
     margin-bottom: rem(0);
     margin-bottom: rem(40);
   }
+}
+.information__img img {
+  width: 100%;              // 親要素に合わせて幅を100%に拡張
+  height: auto;             // 必要に応じて高さを調整
+  aspect-ratio: 345 / 227;     // アスペクト比を指定（例：16:9）
+  object-fit: cover;        // 親要素に合わせてフィットし、アスペクト比を保持
 }
 
 .information__textbox {

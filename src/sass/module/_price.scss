@@ -2,7 +2,7 @@
     
 .price {
   background-color: $green2;
-  padding: rem(83) 0 rem(81);
+  padding: rem(84) 0;
   @include mq("md") {
     padding: rem(101) 0;
     position: relative;
@@ -20,8 +20,7 @@
     background-image: url(../images/common/price_fish.svg);
     background-size: cover;
     background-position: center;
-    z-index: 500;
-    opacity: 0.5;   
+    z-index: 500; 
   }
 }
 
@@ -37,19 +36,26 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+    margin-bottom: rem(37);
   }
 }
 
 .price__img {
-  width: 100%;              // 親要素に合わせて幅を100%に拡張
-  height: auto;             // 必要に応じて高さを調整
-  aspect-ratio: 345 / 227;     // アスペクト比を指定（例：16:9）
   margin-bottom: rem(37);
   @include mq("md") {
     width: 50%;
     margin-left: rem(93);
     display: inline-table;
     margin-bottom: rem(40);
+  }
+}
+
+.price__img img {
+  width: 100%;              // 親要素に合わせて幅を100%に拡張
+  height: auto;             // 必要に応じて高さを調整
+  aspect-ratio: 345 / 227;     // アスペクト比を指定（例：16:9）
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
   }
 }
 
@@ -76,7 +82,13 @@
 }
 
 .price__list-text {
-  margin-bottom: rem(40);
+  margin-bottom: rem(39);
+}
+
+.price__list-text--right {
+  margin-left: rem(40);
+  display: flex;
+  align-items: center;
 }
 
 .price__list-text li{
@@ -91,8 +103,5 @@
 .price__btn {
   display: flex;
   justify-content: center;
-  @include mq("md") {
-    margin-top: rem(37);
-  }
 }
 

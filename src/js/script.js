@@ -97,7 +97,7 @@ $(function () {
     });
 });
 
- // campaign-swiper
+// campaign-swiper
 var campaign__swiper = new Swiper(".campaign-swiper", {
     loop: true,
     speed: 2000,
@@ -117,5 +117,30 @@ var campaign__swiper = new Swiper(".campaign-swiper", {
     navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
-    }
+    },
+    on: {
+      init: adjustCardHeights, // 初期化時に高さを揃える
+      resize: adjustCardHeights, // ウィンドウリサイズ時に再計算
+    },
 });
+
+// campaign-swiper高さそろえ
+function adjustCardHeights() {
+    const slides = document.querySelectorAll(".campaign-swiper__item .campaign-card");
+
+    // 1. 高さリセット
+    slides.forEach((card) => {
+      card.style.height = "auto"; // 高さを一度リセット
+    });
+
+    // 2. 最大高さを取得
+    const maxHeight = Math.max(...Array.from(slides).map((card) => card.offsetHeight));
+
+    // 3. 最大高さを全てのカードに適用
+    slides.forEach((card) => {
+    card.style.height = `${maxHeight}px`;
+    });
+}
+
+  // ウィンドウリサイズ時の高さ調整（Swiper外でも対応可能にするため）
+window.addEventListener("resize", adjustCardHeights);

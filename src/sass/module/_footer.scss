@@ -9,7 +9,7 @@
 }
 
 .footer__logo {
-  margin-bottom: rem(38);
+  margin-bottom: rem(37);
   @include mq("md") {
     display: flex;
     margin-bottom: rem(5);
@@ -60,9 +60,12 @@
   gap: rem(18);
   color: $white;
   font-size: rem(16);
-  // justify-content: center;
+  justify-content: center;
+  margin-left: -10px;
   @include mq("md") {
     gap: rem(120);
+    margin-left: 0;
+    justify-content: flex-start;
   }
 }
 
@@ -80,6 +83,9 @@
   margin-bottom: rem(18);
   position: relative; // 基準を設定
   padding-left: rem(22); // テキストを右にずらす
+}
+.footer__list li a:hover{
+  opacity: 0.6;
 }
 .footer__list li:first-child::before {
   content: '';

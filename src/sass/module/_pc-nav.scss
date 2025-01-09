@@ -4,13 +4,15 @@
     display: none;
     @include mq("md") {
         display: block;
+        height: inherit;
     }
 }
 .pc-nav__items {
     display: flex;
     align-items: center;
     gap: rem(40);
-    color: $white
+    color: $white;
+    height: inherit;
 }
 .pc-nav__item {
     font-size: rem(18);
@@ -20,14 +22,20 @@
     position: relative;
     display: inline-block;
     text-decoration: none;
+    height: inherit;
 }
 .pc-nav__item a{
     display: flex;
     flex-direction: column;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
 }
 .pc-nav__item a::after {
     position: absolute;
-    bottom: -4px;
+    bottom: 22px;
     left: 0;
     content: '';
     width: 100%;
