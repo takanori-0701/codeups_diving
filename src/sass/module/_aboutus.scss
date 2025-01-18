@@ -11,7 +11,7 @@
     @include mq("md") {
     content: '';
     position: absolute;
-    bottom: rem(73);
+    bottom: rem(-85);
     right: max(0px, 50% - min(48vw, 39.8125rem));
     width: rem(194);
     height: rem(180);

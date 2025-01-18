@@ -64,10 +64,11 @@
 .information__text {
   font-size: rem(16);
   margin-bottom: rem(40);
+  @include mq("md") {
+    margin-right: rem(15);
+  }
 }
 
 .information__btn {
-  // display: flex;
-  // justify-content: center;
   text-align: center;
 }
