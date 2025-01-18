@@ -23,7 +23,7 @@
   @include mq("md") {
     content: '';
     position: absolute;
-    top: rem(103);
+    top: rem(-35);
     right: max(0px, 50% - min(48vw, 41.9rem));
     width: rem(301);
     height: rem(138);
@@ -95,13 +95,13 @@
 }
 
 .contact__gmap {
-  max-width: 295px;
-  height: 160px; 
+  max-width: rem(295);
+  height: rem(160); 
   margin: 0 auto; 
   @include mq("md") {
     position: relative;
-    max-width: 273px;
-    height: 148px; 
+    max-width: rem(273);
+    height: rem(148); 
     margin-left: rem(21);
   }
 }

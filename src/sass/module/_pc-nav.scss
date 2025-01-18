@@ -35,7 +35,7 @@
 }
 .pc-nav__item a::after {
     position: absolute;
-    bottom: 22px;
+    bottom: rem(22);
     left: 0;
     content: '';
     width: 100%;
@@ -53,5 +53,5 @@
     line-height: 1;
     font-family: $base-font-family;
     line-height: 1.6;
-    padding-top: 4px;
+    padding-top: rem(4);
 }
