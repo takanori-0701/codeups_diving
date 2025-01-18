@@ -41,3 +41,7 @@ $green2: #DDF0F1;
 $greenaccent: #408F95;
 $red: #C94800;
 
+//背景スクロール停止
+.scroll-prevent {
+  overflow: hidden;
+}

@@ -3,9 +3,11 @@
 .price {
   background-color: $green2;
   padding: rem(84) 0;
+  margin-bottom: rem(80);
   @include mq("md") {
     padding: rem(101) 0;
     position: relative;
+    margin-bottom: rem(140)
   }
 
 }
@@ -14,7 +16,8 @@
     content: '';
     position: absolute;
     bottom: rem(60);
-    left: calc(50% - 43.23%);
+    // left: calc(50% - 43.23%);
+    left: max(0px, 50% - min(48vw, 38.7rem));
     width: rem(437);
     height: rem(201);
     background-image: url(../images/common/price_fish.svg);

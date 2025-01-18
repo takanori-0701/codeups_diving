@@ -1,9 +1,11 @@
 @use "global" as *;
     
 .voice {
-  padding: rem(88) 0 rem(82);
+  // padding: rem(88) 0 rem(82);
+  margin-bottom: rem(82);
     @include mq("md") {
-    padding: rem(143) 0;
+    // padding: rem(143) 0;
+    margin-bottom: rem(143);
     position: relative;
   }
 }
@@ -11,8 +13,8 @@
   @include mq("md") {
     content: '';
     position: absolute;
-    top: rem(20);
-    left: calc(50% - 43.1%);
+    top: rem(-120);
+    left: max(0px, 50% - min(48vw, 38.7rem));
     width: rem(301);
     height: rem(138);
     background-image: url(../images/common/voice_fish.svg);
@@ -25,8 +27,8 @@
   @include mq("md") {
     content: '';
     position: absolute;
-    bottom: rem(75);
-    right: calc(50% - 37.53%);
+    bottom: rem(-70);
+    right: max(0px, 50% - min(48vw, 33.8rem));
     width: rem(71);
     height: rem(162);
     background-image: url(../images/common/voice_fish2.svg);

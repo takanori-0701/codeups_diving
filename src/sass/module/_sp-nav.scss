@@ -9,6 +9,7 @@
     height: 100vh;
     background-color: $greenaccent;
     display: none;
+    overflow: scroll;
     @include mq("md") {
         display: none;
     }

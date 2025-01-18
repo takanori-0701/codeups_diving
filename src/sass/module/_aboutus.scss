@@ -1,10 +1,10 @@
 @use "global" as *;
     
 .aboutus {
-    padding-bottom: rem(74);
+    margin-bottom: rem(74);
     @include mq("md") {
         position: relative;
-        padding-bottom: rem(109);
+        margin-bottom: rem(162);
     }
 }
 .aboutus::before {
@@ -12,16 +12,23 @@
     content: '';
     position: absolute;
     bottom: rem(73);
-    right: calc(50% - 44.23%);
+    right: max(0px, 50% - min(48vw, 39.8125rem));
     width: rem(194);
     height: rem(180);
     background-image: url(../images/common/about_coral.svg);
     background-size: cover;
     background-position: center;
     z-index: 500;
-    // opacity: 0.5;   
     }
 }
+
+// .aboutus__inner {
+//     margin-bottom: rem(74);
+//     @include mq("md") {
+//         position: relative;
+//         margin-bottom: rem(109);
+//     }
+// }
 
 .aboutus__title {
     margin-bottom: rem(28);

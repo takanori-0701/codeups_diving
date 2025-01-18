@@ -1,6 +1,7 @@
 
 // ハンバーガーメニューとトップスライド
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+
+jQuery(function ($) { // WordPressでも「$」が使用可能にする
     $(function () {
         // ハンバーガーメニューの開閉
         $('.toggle').on('click', function () {
@@ -9,27 +10,31 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             // .sp-navのアニメーション制御
             if ($('.sp-nav').is(':visible')) {
                 $('.sp-nav').fadeOut(400); // フェードアウト（400ms）
+                $('html').removeClass('scroll-prevent'); // 背景スクロールを有効化
+                
             } else {
                 $('.sp-nav').fadeIn(400); // フェードイン（400ms）
+                $('html').addClass('scroll-prevent'); // 背景スクロールを無効化
             }
         });
 
-        // ウィンドウリサイズ時の処理
-        $(window).on('resize', function () {
-            if ($(window).width() >= 782) {
-                $('.sp-nav').hide(); // 強制的に非表示
-                $('.toggle').removeClass('open'); // ハンバーガーアイコンの状態もリセット
-            }
-        });
+        // スワイパー設定
         var swiper = new Swiper(".mySwiper", {
             loop: true, // スライダーをループさせる
+            effect: "fade", // フェード切り替えを有効にする
+            fadeEffect: {
+                crossFade: true, // フェード中にスライドを重ねる
+            },
             autoplay: { // 自動再生設定
-                delay: 5000, // 3秒ごとにスライド
+                delay: 5000, // 5秒ごとにスライド
                 disableOnInteraction: false, // ユーザーが操作しても自動再生を続ける
             },
+            speed: 1000, // フェードの速度（ミリ秒）
         });
     });
 });
+
+
 
 
 // 戻るボタン

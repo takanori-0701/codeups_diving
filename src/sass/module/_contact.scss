@@ -1,10 +1,12 @@
 @use "global" as *;
     
 .contact {
-  padding: rem(80) 0 rem(102);
+  // padding: rem(80) 0 rem(102);
+  margin-bottom: rem(102);
   position: relative;
   @include mq("md") {
-    padding: rem(140) 0 rem(160);
+    // padding: rem(140) 0 rem(160);
+    margin-bottom: rem(160);
   }
 }
 .contact::before {
@@ -22,7 +24,7 @@
     content: '';
     position: absolute;
     top: rem(103);
-    right: calc(50% - 46.4%);
+    right: max(0px, 50% - min(48vw, 41.9rem));
     width: rem(301);
     height: rem(138);
     background-image: url(../images/common/contact_fish.svg);
