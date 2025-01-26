@@ -2,7 +2,7 @@
     
 .blog-cards {
   padding: 0 rem(7);
-  margin-bottom: rem(-3);
+  margin-bottom: rem(1);
   @include mq("md") {
     display: flex;
     gap: rem(40);

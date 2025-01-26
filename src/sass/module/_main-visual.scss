@@ -24,11 +24,11 @@
     font-family: $fb-font-family;
     font-weight: $normal;
     line-height: 1.25;
-    margin-left: 21px;
+    text-indent: rem(22);
     @include mq("md") {
         font-size: rem(80);
         letter-spacing: 43.2px;
-        text-indent: 0.27em;
+        text-indent: rem(42);
     }
 }
 

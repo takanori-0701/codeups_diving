@@ -1,20 +1,11 @@
 @use "global" as *;
 
 .campaign {
-    // padding: rem(43) 0 rem(87);
-    padding-bottom:rem(87);
+    margin-bottom:rem(87);
     @include mq("md") {
-        // padding: rem(120) 0 rem(143);
-        padding-bottom:rem(143);
+        margin-bottom:rem(143);
     }
 }
-
-// .campaign__inner {
-//     margin: rem(43) 0 rem(87);
-//     @include mq("md") {
-//         margin: rem(120) 0 rem(143);
-//     }
-// } 
 
 .campaign__title {
     margin-bottom: rem(28);

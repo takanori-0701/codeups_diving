@@ -5,7 +5,7 @@
   padding: rem(84) 0;
   margin-bottom: rem(80);
   @include mq("md") {
-    padding: rem(101) 0;
+    padding: rem(100) 0;
     position: relative;
     margin-bottom: rem(140)
   }
@@ -30,7 +30,7 @@
 .price__title {
   margin-bottom: rem(29);
   @include mq("md") {
-    margin-bottom: rem(40);
+    margin-bottom: rem(39);
   }
 }
 
@@ -39,17 +39,17 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    margin-bottom: rem(37);
+    margin-bottom: rem(78);
   }
 }
 
 .price__img {
-  margin-bottom: rem(37);
+  margin-bottom: rem(38);
   @include mq("md") {
     width: 50%;
     margin-left: rem(93);
     display: inline-table;
-    margin-bottom: rem(40);
+    margin-bottom: rem(0);
   }
 }
 
@@ -99,7 +99,7 @@
   justify-content: space-between;
   margin-bottom: rem(8);
   @include mq("md") {
-    line-height: 1.49;
+    line-height: 1.5;
   }
 }
 
