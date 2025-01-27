@@ -8,6 +8,11 @@
   }
 }
 
+.footer__inner {
+  @include mq("md") {
+    margin-bottom: rem(75);
+  }
+}
 
 .footer__logo {
   margin-bottom: rem(37);
@@ -66,7 +71,6 @@
   @include mq("md") {
     gap: rem(120);
     margin-left: 0;
-    margin-bottom: rem(40);
     justify-content: flex-start;
   }
 }
@@ -80,12 +84,25 @@
 
 .footer__list {
   margin-bottom: rem(34);
+  @include mq("md") {
+    margin-bottom: rem(0);
+  }
 }
+.footer__list:nth-child(1) {
+  @include mq("md") {
+    margin-bottom: rem(34);
+}
+}
+
+
 .footer__list li{
-  margin-bottom: rem(18);
   position: relative; // 基準を設定
   padding-left: rem(22); // テキストを右にずらす
 }
+.footer__list li:not(:last-of-type) {
+  margin-bottom: rem(18);
+}
+
 .footer__list li a:hover{
   opacity: 0.6;
 }
@@ -104,6 +121,38 @@
 .footer__list li:first-child {
   font-weight: $bold;
 }
+
+.footer__list_main {
+  margin-bottom: rem(34);
+  font-weight: $bold;
+  @include mq("md") {
+
+  }
+}
+.footer__list_main li{
+  position: relative; // 基準を設定
+  padding-left: rem(22); // テキストを右にずらす
+}
+
+.footer__list_main li a:hover{
+  opacity: 0.6;
+}
+.footer__list_main li:first-child::before {
+  content: '';
+  display: block;
+  position: absolute; // テキストの左側に配置
+  top: 10%; // 垂直中央に配置
+  left: 0; // 左端から開始
+  width: rem(18); // 画像の幅
+  height: rem(18); // 画像の高さ
+  background-image: url('../images/common/starfish.svg'); // 画像を設定
+  background-size: cover; // 画像をリサイズ
+  background-repeat: no-repeat; // 繰り返しを防止
+}
+.footer__list_main li:last-child {
+  margin-bottom: rem(0); 
+}
+
 
 .footer__right {
   gap: rem(120);
