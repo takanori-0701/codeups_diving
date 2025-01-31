@@ -104,7 +104,9 @@
 }
 
 .footer__list li a:hover{
-  opacity: 0.6;
+  @include mq("md") {
+    opacity: 0.6;
+  }
 }
 .footer__list li:first-child::before {
   content: '';
@@ -135,7 +137,9 @@
 }
 
 .footer__list_main li a:hover{
-  opacity: 0.6;
+  @include mq("md") {
+    opacity: 0.6;
+  }
 }
 .footer__list_main li:first-child::before {
   content: '';
@@ -186,3 +190,8 @@
     line-height: 1.5;
   }
 }
+
+// *::before,
+// *::after {
+// outline: 1px solid red;
+// }

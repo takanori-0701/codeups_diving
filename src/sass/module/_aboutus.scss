@@ -22,14 +22,6 @@
     }
 }
 
-// .aboutus__inner {
-//     margin-bottom: rem(74);
-//     @include mq("md") {
-//         position: relative;
-//         margin-bottom: rem(109);
-//     }
-// }
-
 .aboutus__title {
     margin-bottom: rem(28);
     @include mq("md") {
@@ -48,7 +40,7 @@
     aspect-ratio: 345 / 212;
     margin-bottom: rem(41);
     @include mq("md") {
-        margin-bottom: rem(52);
+        margin-bottom: rem(0);
     }
 }
 
@@ -96,6 +88,7 @@
         color: white;
         width: 50%;
         white-space: nowrap;
+        margin-bottom: rem(16);
     }
     
 }
@@ -116,8 +109,7 @@
     }
 }
 .aboutus__btn {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding-right: 12px;
     @include mq("md") {
         padding-right: 0;

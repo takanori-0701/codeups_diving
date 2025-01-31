@@ -5,7 +5,7 @@
   padding: rem(84) 0;
   margin-bottom: rem(82);
   @include mq("md") {
-    padding: rem(100) 0 rem(36);
+    padding: rem(100) 0 rem(76);
     margin-bottom: rem(0);
   }
 }
@@ -35,7 +35,6 @@
   @include mq("md") {
     width: 50%;
     margin-bottom: rem(0);
-    margin-bottom: rem(40);
   }
 }
 .information__img img {
@@ -48,7 +47,7 @@
 .information__textbox {
   @include mq("md") {
     padding-left: rem(45);
-    margin-top: rem(-50);
+    margin-top: rem(-9);
     width: 50%;
   }
 }

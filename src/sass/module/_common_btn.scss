@@ -46,8 +46,11 @@
   transform: skew(45deg);
 }
 .common_btn:hover .common_btn__arrow {
+  @include mq("md") {
   border-bottom: rem(1) solid $greenaccent; // ホバー時に緑色に変更
   border-right: rem(1) solid $greenaccent; // ホバー時に緑色に変更
+  }
+
 }
 
 .common_btn::after {
@@ -64,8 +67,12 @@
   z-index: -1;
 }
 .common_btn:hover {
-  color: $greenaccent;
+  @include mq("md") {
+    color: $greenaccent;
+  }
 }
 .common_btn:hover::after {
-  transform: scale(1, 1);
+  @include mq("md") {
+    transform: scale(1, 1);
+  }
 }

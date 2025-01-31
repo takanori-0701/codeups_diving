@@ -23,8 +23,8 @@
   @include mq("md") {
     content: '';
     position: absolute;
-    top: rem(-35);
-    right: max(0px, 50% - min(48vw, 41.9rem));
+    top: rem(-37);
+    right: max(0px, 50% - min(48vw, 41.7rem));
     width: rem(301);
     height: rem(138);
     background-image: url(../images/common/contact_fish.svg);
@@ -41,7 +41,7 @@
     align-items: center;
     background: $white;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    padding: rem(80) rem(50);
+    padding: rem(79) rem(50);
   }
 }
 
@@ -130,6 +130,5 @@
 }
 
 .contact__btn {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }

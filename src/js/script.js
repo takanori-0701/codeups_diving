@@ -6,6 +6,7 @@ jQuery(function ($) { // WordPressでも「$」が使用可能にする
         // ハンバーガーメニューの開閉
         $('.toggle').on('click', function () {
             $(this).toggleClass('open'); // ハンバーガーアイコンのアニメーション切り替え
+            $('.header__inner').toggleClass('menu-open');
 
             // .sp-navのアニメーション制御
             if ($('.sp-nav').is(':visible')) {
@@ -17,6 +18,7 @@ jQuery(function ($) { // WordPressでも「$」が使用可能にする
                 $('html').addClass('scroll-prevent'); // 背景スクロールを無効化
             }
         });
+        
 
         // スワイパー設定
         var swiper = new Swiper(".mySwiper", {

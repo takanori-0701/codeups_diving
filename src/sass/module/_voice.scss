@@ -1,11 +1,9 @@
 @use "global" as *;
     
 .voice {
-  // padding: rem(88) 0 rem(82);
   margin-bottom: rem(82);
     @include mq("md") {
-    // padding: rem(143) 0;
-    margin-bottom: rem(143);
+    margin-bottom: rem(142);
     position: relative;
   }
 }
@@ -46,6 +44,5 @@
 }
 
 .voice__btn {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }

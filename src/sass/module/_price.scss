@@ -5,7 +5,7 @@
   padding: rem(84) 0;
   margin-bottom: rem(80);
   @include mq("md") {
-    padding: rem(100) 0;
+    padding: rem(100)  0 rem(103);
     position: relative;
     margin-bottom: rem(140)
   }
@@ -104,7 +104,6 @@
 }
 
 .price__btn {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
