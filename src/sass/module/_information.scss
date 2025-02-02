@@ -5,7 +5,7 @@
   padding: rem(84) 0;
   margin-bottom: rem(82);
   @include mq("md") {
-    padding: rem(100) 0 rem(76);
+    padding: rem(100) 0 rem(100);
     margin-bottom: rem(0);
   }
 }
@@ -46,7 +46,7 @@
 
 .information__textbox {
   @include mq("md") {
-    padding-left: rem(45);
+    padding-left: rem(48);
     margin-top: rem(-9);
     width: 50%;
   }
@@ -65,9 +65,6 @@
 .information__text {
   font-size: rem(16);
   margin-bottom: rem(40);
-  @include mq("md") {
-    margin-right: rem(15);
-  }
 }
 
 .information__btn {

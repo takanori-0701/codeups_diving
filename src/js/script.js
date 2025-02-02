@@ -104,7 +104,7 @@ $(function () {
     });
 });
 
-// campaign-swiper
+//campaign-swiper
 var campaign__swiper = new Swiper(".campaign-swiper", {
     loop: true,
     speed: 2000,
@@ -130,6 +130,27 @@ var campaign__swiper = new Swiper(".campaign-swiper", {
       resize: adjustCardHeights, // ウィンドウリサイズ時に再計算
     },
 });
+
+var campaign__swiper = new Swiper(".campaign-swiper2", {
+    loop: true,
+    speed: 2000,
+    slidesPerView: "auto",
+    spaceBetween: 26,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: "auto",
+        spaceBetween: 40
+      }
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
 
 // campaign-swiper高さそろえ
 function adjustCardHeights() {
