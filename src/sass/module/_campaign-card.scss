@@ -125,14 +125,19 @@
     width: auto;
 }
 
-.campaign-swiper {
+// .campaign-swiper {
+//     margin-bottom: rem(24);
+//     // clip-path: inset(0 50vw 0 0);
+//     @include mq("md") {
+//         margin-bottom: rem(65);
+//     }
+// }
+
+.campaign-swiper__right {
+    margin-right: calc(53% - 50vw); /* 親幅を超えるデザインを実現 */
     margin-bottom: rem(24);
     // clip-path: inset(0 50vw 0 0);
     @include mq("md") {
         margin-bottom: rem(65);
     }
-}
-
-.campaign-swiper__right {
-    margin-right: calc(53% - 50vw); /* 親幅を超えるデザインを実現 */
 }

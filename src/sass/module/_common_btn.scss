@@ -20,12 +20,10 @@
 .common_btn::before {
   position: absolute;
   top: 0.2rem;
-  z-index: -2;
   border: 1px solid #408f95;
   bottom: -0.25rem;
   content: "";
   left: rem(5);
-  position: absolute;
   right: rem(-5);
   transition: 0.3s;
   z-index: -1;

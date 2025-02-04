@@ -38,10 +38,10 @@
   padding: 0 rem(25);
   @include mq("md") {
     display: flex;
-    align-items: center;
+    // align-items: center;
     background: $white;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    padding: rem(79) rem(50);
+    padding: rem(80) rem(50);
   }
 }
 
@@ -68,6 +68,7 @@
 .contact__content-logo img {
   width: rem(174);
   display: inline-block; /* 中央揃えを維持するためにインラインブロック */
+  margin-bottom: rem(-1);
   @include mq("md") {
     width: rem(200);
   }
@@ -82,7 +83,6 @@
 
 .contact__map-text {
   font-size: rem(16);
-  line-height: 1.7;
   color: $green;
   text-align: center;
   margin-bottom: rem(16);
@@ -90,8 +90,11 @@
   @include mq("md") {
     text-align: left;
     margin-bottom: 0;
-    line-height: 1.7;
   }
+}
+.contact__map-text p:not(:last-child) {
+  margin-bottom: rem(4);
+  line-height: 1.5;
 }
 
 .contact__gmap {
@@ -113,7 +116,8 @@
 
 .contact__content-form {
   @include mq("md") {
-    margin-left: rem(82);
+    padding-left: rem(82);
+    padding-top: rem(20);
   }
 }
 
@@ -122,13 +126,14 @@
   font-size: rem(14);
   color: $greenaccent;
   text-align: center;
-  margin-bottom: rem(39);
+  margin-bottom: rem(40);
   @include mq("md") {
-    margin-bottom: rem(41);
+    margin-bottom: rem(40);
     margin-top: rem(0);
   };
 }
 
 .contact__btn {
   text-align: center;
+  margin-left: rem(2);
 }
