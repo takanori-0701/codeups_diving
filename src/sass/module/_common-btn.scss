@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.common_btn {
+.common-btn {
   position: relative;
   font-size: rem(14);
   color: $white;
@@ -17,7 +17,7 @@
   z-index: 1;
   text-align: left;
 }
-.common_btn::before {
+.common-btn::before {
   position: absolute;
   top: 0.2rem;
   border: 1px solid #408f95;
@@ -29,7 +29,7 @@
   z-index: -1;
 }
 
-.common_btn__arrow {
+.common-btn__arrow {
   content: "";
   position: absolute;
   margin: auto;
@@ -43,7 +43,7 @@
   border-right: rem(1) solid $white;
   transform: skew(45deg);
 }
-.common_btn:hover .common_btn__arrow {
+.common-btn:hover .common-btn__arrow {
   @include mq("md") {
   border-bottom: rem(1) solid $greenaccent; // ホバー時に緑色に変更
   border-right: rem(1) solid $greenaccent; // ホバー時に緑色に変更
@@ -51,7 +51,7 @@
 
 }
 
-.common_btn::after {
+.common-btn::after {
   background: #ffffff;
   position: absolute;
   top: 0;
@@ -64,12 +64,12 @@
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
 }
-.common_btn:hover {
+.common-btn:hover {
   @include mq("md") {
     color: $greenaccent;
   }
 }
-.common_btn:hover::after {
+.common-btn:hover::after {
   @include mq("md") {
     transform: scale(1, 1);
   }

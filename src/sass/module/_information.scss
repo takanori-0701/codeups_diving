@@ -3,9 +3,14 @@
 .information {
   background-color: $green2;
   padding: rem(84) 0;
-  margin-bottom: rem(82);
   @include mq("md") {
     padding: rem(100) 0 rem(100);
+  }
+}
+
+.information-margin {
+  margin-bottom: rem(82);
+  @include mq("md") {
     margin-bottom: rem(0);
   }
 }

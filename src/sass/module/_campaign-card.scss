@@ -1,5 +1,14 @@
 @use "global" as *;
 
+.campaign__swiper-container {
+    margin-right: calc(53% - 50vw); /* 親幅を超えるデザインを実現 */
+    margin-bottom: rem(24);
+    // clip-path: inset(0 50vw 0 0);
+    @include mq("md") {
+        margin-bottom: rem(65);
+    }
+}
+
 .campaign-swiper__item {
     margin-bottom: rem(16);
 
@@ -9,6 +18,7 @@
     background-color: $white;
     box-shadow: 0 0 8px gray;
     width: rem(280);
+    display: inline-block;
     @include mq("md") {
         width: rem(333);
         transition: all 0.3s ease 0s;
@@ -133,11 +143,3 @@
 //     }
 // }
 
-.campaign-swiper__right {
-    margin-right: calc(53% - 50vw); /* 親幅を超えるデザインを実現 */
-    margin-bottom: rem(24);
-    // clip-path: inset(0 50vw 0 0);
-    @include mq("md") {
-        margin-bottom: rem(65);
-    }
-}

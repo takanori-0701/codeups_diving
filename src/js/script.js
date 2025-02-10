@@ -105,7 +105,7 @@ $(function () {
 });
 
 //campaign-swiper
-var campaign__swiper = new Swiper(".campaign-swiper", {
+var campaign__swiper = new Swiper(".js-campaign-swiper", {
     loop: true,
     speed: 2000,
     slidesPerView: "auto",
@@ -137,20 +137,20 @@ var campaign__swiper = new Swiper(".campaign-swiper2", {
     slidesPerView: "auto",
     spaceBetween: 26,
     autoplay: {
-      delay: 2000,
-      disableOnInteraction: false
+    delay: 2000,
+    disableOnInteraction: false
     },
     breakpoints: {
-      768: {
+    768: {
         slidesPerView: "auto",
         spaceBetween: 40
-      }
+    }
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
     }
-  });
+});
 
 // campaign-swiper高さそろえ
 function adjustCardHeights() {
