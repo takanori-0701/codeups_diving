@@ -15,6 +15,7 @@
   display: flex; /* 矢印を中央揃えにするため追加 */
   justify-content: center; /* 水平方向中央揃え */
   align-items: center; /* 垂直方向中央揃え */
+  // transition: all 0.3s ease-in-out 0s;
   @include mq("md") {
     width: rem(80);
     height: rem(80);
@@ -22,6 +23,10 @@
     bottom: rem(30);
   }
 }
+
+// .pagetop:hover {
+//   opacity: 1;
+// }
 
 .pagetop a {
   display: block;

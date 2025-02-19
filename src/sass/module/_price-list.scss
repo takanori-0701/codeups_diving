@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.price-list {
+
+}
+
+.price-lists__box:not(:last-child) {
+    margin-bottom: rem(39);
+}
+
+.price-list__title {
+    font-size: rem(16);
+    font-weight: $bold;
+    color: #0D2936;
+    border-bottom: 1px solid #408F95;
+    padding-bottom: rem(1);
+    margin-bottom: rem(8);
+    @include mq("md") {
+        padding-bottom: rem(4);
+}
+
+}
+
+.price-list__text li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(8);
+    @include mq("md") {
+        line-height: 1.5;
+    }
+}
+
+// .price-list__text:not(:last-child) {
+//     margin-bottom: rem(39);
+// }
+
+.price-list__name {
+
+}
+
+.price-list__price {
+    margin-left: rem(40);
+    display: flex;
+    align-items: center
+}
+

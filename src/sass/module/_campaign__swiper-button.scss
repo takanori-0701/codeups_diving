@@ -26,6 +26,10 @@
   border-radius: 50%;
   width: rem(80);
   height: rem(80);
+  transition: all 0.3s ease-in-out 0s;
+}
+.swiper-button-prev:hover{
+  background:  rgba(64, 143, 149, 0.7);
 }
 
 /* 右矢印ボタン */
@@ -39,7 +43,13 @@
   border-radius: 50%;
   width: rem(80);
   height: rem(80);
+  transition: all 0.3s ease-in-out 0s;
 }
+
+.swiper-button-next:hover{
+  background:  rgba(64, 143, 149, 0.7);
+}
+
 
 /* 矢印アイコン */
 .swiper-button-prev::before,

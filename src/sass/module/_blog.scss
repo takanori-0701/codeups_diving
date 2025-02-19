@@ -47,6 +47,7 @@
 
 }
 .blog__title {
+  margin-bottom: rem(28);
   @include mq("md") {
     padding-bottom: rem(52);
   }

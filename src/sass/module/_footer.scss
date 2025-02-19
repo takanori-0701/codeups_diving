@@ -29,12 +29,16 @@
   }
 }
 
-.footer__logo--link {
+.footer__logo-link {
   width: rem(120);
+  transition: all 0.3s ease-in-out 0s;
   @include mq("md") {
     margin-bottom: rem(16);
     width: rem(200);
   }
+}
+.footer__logo-link:hover {
+  opacity: 0.6;
 }
 
 .footer__sns {
@@ -46,19 +50,27 @@
   }
 }
 
-.footer__Facebook--link {
+.footer__Facebook-link {
   width: rem(25);
+  transition: all 0.3s ease-in-out 0s;
   @include mq("md") {
     width: rem(32);
   }
 }
+.footer__Facebook-link:hover {
+  opacity: 0.6;
+}
 
-.footer__Instagramlogo--link {
+.footer__Instagramlogo-link {
   width: rem(25);
   margin-left: rem(16);
+  transition: all 0.3s ease-in-out 0s;
   @include mq("md") {
     width: rem(32);
   }
+}
+.footer__Instagramlogo-link:hover {
+  opacity: 0.6;
 }
 
 .footer__nav {
@@ -103,11 +115,15 @@
   margin-bottom: rem(18);
 }
 
+.footer__list li a {
+  transition: all 0.3s ease-in-out 0s;
+}
 .footer__list li a:hover{
   @include mq("md") {
     opacity: 0.6;
   }
 }
+
 .footer__list li:first-child::before {
   content: '';
   display: block;
@@ -120,6 +136,7 @@
   background-size: cover; // 画像をリサイズ
   background-repeat: no-repeat; // 繰り返しを防止
 }
+
 .footer__list li:first-child {
   font-weight: $bold;
 }
@@ -127,10 +144,8 @@
 .footer__list_main {
   margin-bottom: rem(34);
   font-weight: $bold;
-  @include mq("md") {
-
-  }
 }
+
 .footer__list_main li{
   position: relative; // 基準を設定
   padding-left: rem(22); // テキストを右にずらす
@@ -153,10 +168,10 @@
   background-size: cover; // 画像をリサイズ
   background-repeat: no-repeat; // 繰り返しを防止
 }
+
 .footer__list_main li:last-child {
   margin-bottom: rem(0); 
 }
-
 
 .footer__right {
   gap: rem(120);
@@ -190,8 +205,3 @@
     line-height: 1.5;
   }
 }
-
-// *::before,
-// *::after {
-// outline: 1px solid red;
-// }

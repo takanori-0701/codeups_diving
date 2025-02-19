@@ -63,7 +63,7 @@
     border-bottom: 1px solid $greenaccent;
 }
 
-.campaign-card__category--tab {
+.campaign-card__category-tab {
     font-size: rem(12);
     font-weight: 500;
     border: rem(1) solid $greenaccent;
@@ -77,7 +77,7 @@
     }
 }
 
-.campaign-card__category--title {
+.campaign-card__category-title {
     font-size: rem(16);
     font-weight: $medium;
     color: $black;
@@ -108,7 +108,7 @@
     font-weight: $bold;
 }
 
-.campaign-card__price--up {
+.campaign-card__price-up {
     font-size: rem(20);
     margin-right: rem(16);
     margin-bottom: 6px;
@@ -122,7 +122,7 @@
     }
 }
 
-.campaign-card__price--down {
+.campaign-card__price-down {
     font-size: rem(32);
     color: $greenaccent;
     line-height: 1.5;

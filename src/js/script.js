@@ -21,7 +21,7 @@ jQuery(function ($) { // WordPressでも「$」が使用可能にする
         
 
         // スワイパー設定
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".js-topSwiper", {
             loop: true, // スライダーをループさせる
             effect: "fade", // フェード切り替えを有効にする
             fadeEffect: {
