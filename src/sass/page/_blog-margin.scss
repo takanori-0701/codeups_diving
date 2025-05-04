@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.blog-margin {
+    margin-bottom: rem(88);
+@include mq("md") {
+position: relative;
+padding-top: rem(100);
+margin-bottom: rem(144);
+}
+}

@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.faq {
+    position: relative;
+}
+
+.faq__inner {
+    padding: 0 rem(15);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(700);
+    width: 100%;
+    @include mq(md) {
+        padding: 0;
+        }
+}
+
+.faq::before {
+    content: '';
+    position: absolute;
+    top: rem(-120);
+    left: max(0px, 50% - min(48vw, 38.7rem));
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;   
+@include mq("md") {
+    content: '';
+    position: absolute;
+    top: rem(-120);
+    left: max(0px, 50% - min(48vw, 38.7rem));
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;   
+}
+}
+
+.faq__cards {
+    margin-bottom: rem(40);
+}
+
+.faq-card {
+    margin-bottom: rem(16);
+}
+
+.faq-card__text {
+    background: $greenaccent;
+    font-size: rem(20);
+    color: $white;
+    padding: rem(28) rem(40);
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* プラス（`+`）マークのアイコン */
+.faq-card__text::before,
+.faq-card__text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    background-color: $white;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* 縦線 */
+.faq-card__text::before {
+    width: 1px;
+    height: 20px;
+    transform: translateY(-50%);
+}
+
+/* 横線 */
+.faq-card__text::after {
+    width: 20px;
+    height: 1px;
+    transform: translateY(-50%);
+}
+
+/* `-` マーク（開いた時） */
+.faq-card[open] .faq-card__text::before {
+    transform: translateY(-50%) rotate(90deg); /* 縦線を横に回転 */
+}
+
+.faq-card[open] .faq-card__text::after {
+    opacity: 0; /* 横線を消してマイナスに */
+}
+
+/* 回答部分のスタイル */
+.faq-card__answer {
+    font-size: rem(16);
+    padding: rem(40);
+    border: solid rem(1) $greenaccent;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* 詳細を開いた時のスタイル */
+.faq-card[open] .faq-card__answer {
+    opacity: 1;
+    max-height: 500px; /* 適切な高さに設定 */
+}

@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.blog-page__single {
+
+}
+
+.blog-single {
+
+}
+
+.blog__textbox-time {
+    font-size: rem(14);
+    font-family: $en-font-family;
+    color: $green;
+    margin-bottom: rem(8);
+}
+
+.blog-single__title {
+    font-size: rem(32);
+    font-weight: $medium;
+    color: $green;
+    border-bottom: solid 1px $greenaccent;
+    margin-bottom: rem(40);
+}
+
+.blog-single__img {
+  width: 100%;
+  aspect-ratio: 345/ 231;
+  margin-bottom: rem(24);
+}
+.blog-single__img img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.blog-single__text:not(:last-child) {
+    margin-bottom: rem(24);
+}
+
+.blog-single__tags {
+    margin-bottom: rem(24);
+}
+
+.blog-single__tags li{
+    position: relative;
+    padding-left: rem(27);
+}
+
+.blog-single__tags li:not(:last-child) {
+    margin-bottom: rem(8);
+}   
+
+.blog-single__tags li::after {
+    content: "";
+    background-image: url("/assets/images/common/starfish_g.svg");
+    width: rem(18);
+    height: rem(18);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* 画像全体を表示 */
+    position: absolute;
+    margin-left: rem(5);
+    left: -4px;
+    top: 3px;
+}
+.blog-single__tag {
+
+}
+

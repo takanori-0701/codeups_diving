@@ -4,13 +4,6 @@
     height: 100vh;
 }
 
-.main-visual-margin {
-    margin-bottom: rem(43);
-    @include mq("md") {
-        margin-bottom: rem(120); 
-    }
-}
-
 .main-visual__text {
     position: absolute;
     top:50%;

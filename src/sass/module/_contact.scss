@@ -6,13 +6,6 @@
   }
 }
 
-.contact-margin {
-  margin-bottom: rem(102);
-  @include mq("md") {
-    margin-bottom: rem(160);
-  }
-}
-
 .contact::before {
   content: '';
     position: absolute;

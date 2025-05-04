@@ -1,0 +1,196 @@
+@use "global" as *;
+
+.voice-page {
+    position: relative;
+
+}
+
+.voice-page__inner {
+
+}
+
+.inner {
+
+}
+
+.voice-page::before {
+    content: '';
+    position: absolute;
+    top: rem(-120);
+    left: max(0px, 50% - min(48vw, 38.7rem));
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;   
+@include mq("md") {
+    content: '';
+    position: absolute;
+    top: rem(-120);
+    left: max(0px, 50% - min(48vw, 38.7rem));
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;   
+}
+}
+.voice-page__cards {
+    
+}
+
+.voice-page__inner {
+
+}
+
+.voice-tab__box {
+    margin-bottom: rem(40);
+}
+
+.voice-page__tab-lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(16) rem(20);
+    @include mq(md) {
+        grid-template-columns: 162px 162px 162px 162px;
+        }
+}
+
+.tab-list__item.active {
+    z-index: 1000;
+    font-size: rem(14);
+    line-height: calc(22px / 14px * 1rem);
+    border: solid 1px $greenaccent;
+    display: inline-block;
+    padding: rem(6) 0;
+    color: $greenaccent;
+    transition: all 0.3s ease-in-out 0s;
+    text-align: center;
+    background: $white;
+    @include mq(md) {
+        width: rem(162);
+        }
+}
+.tab-list__item:hover {
+    background: $greenaccent;
+    color: $white;
+}
+
+
+
+
+.voice-page__tab-panel {
+    display: none;
+    padding: 20px 0;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .voice-page__tab-panel .active {
+    display: block;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
+
+.voice-cards {
+
+}
+
+.voice-cards__item {
+
+}
+
+.voice-card {
+
+}
+
+.voice-card__content {
+
+}
+
+.voice-card__taitle_img_box {
+
+}
+
+.voice-card__taitle_data {
+
+}
+
+.voice-card__deta {
+
+}
+
+.voice-card__deta-age {
+
+}
+
+.voice-card__deta-tag {
+
+}
+
+.voice-card__title {
+
+}
+
+.voice-card__img {
+
+}
+
+.colorbox {
+
+}
+
+.voice-card__text {
+
+}
+
+.tabs {
+  max-width: 500px;
+  margin: 10% auto;
+}
+
+.tab-list {
+  display: flex;
+}
+
+.tab-item {
+  border-radius: 5px 5px 0 0;
+  background-color: #fff;
+  border: solid 1px skyblue;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+}
+
+.tab-content {
+  background-color: #f5f5f5;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-item.active {
+  background-color: skyblue;
+  color: #fff;
+  font-weight: bold;
+}
+
+.tab-panel.active {
+  display: block;
+  padding: 3%;
+}
+.tab-panel.active h2 {
+  font-size: 20px;
+  font-weight: bold;
+}

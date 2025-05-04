@@ -5,12 +5,7 @@
         position: relative;
     }
 }
-.aboutus-margin {
-    margin-bottom: rem(74);
-    @include mq("md") {
-        margin-bottom: rem(138);
-    }
-}
+
 .aboutus::before {
     @include mq("md") {
     content: '';

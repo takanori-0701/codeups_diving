@@ -12,3 +12,11 @@
     // margin-bottom: rem(80);
   }
 } 
+
+.blog-cards--blog {
+  margin-bottom: rem(80);
+  @include mq("md") {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80) rem(40);
+  }
+}

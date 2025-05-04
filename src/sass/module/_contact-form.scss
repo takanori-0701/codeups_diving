@@ -1,0 +1,183 @@
+@use "global" as *;
+    
+.contact-form {
+  position: relative;
+  @include mq("md") {
+  }
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: rem(-120);
+  left: max(0px, 50% - min(48vw, 38.7rem));
+  width: rem(301);
+  height: rem(138);
+  background-image: url(../images/common/voice_fish.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: 500;   
+@include mq("md") {
+  content: '';
+  position: absolute;
+  top: rem(-120);
+  left: max(0px, 50% - min(48vw, 38.7rem));
+  width: rem(301);
+  height: rem(138);
+  background-image: url(../images/common/voice_fish.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: 500;   
+}
+}
+
+.contact-form__inner {
+  padding: 0 rem(15);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(700);
+  width: 100%;
+  @include mq(md) {
+      padding: 0;
+      }
+}
+
+.contact-form__form-margin {
+  padding-bottom: rem(40);
+  @include mq(md) {
+    margin-bottom:rem(80)
+  }
+}
+
+.contact-form__form-row {
+  display: block;
+  border-bottom: dotted 1px $greenaccent;
+  padding: rem(24) 0;
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(40) 0;
+      }
+}
+.contact-form__form-margin {
+  margin-bottom: rem(40);
+  @include mq(md) {
+    margin-bottom: rem(24);
+  }
+}
+
+.contact-form__form-label {
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $green;
+  margin-bottom: rem(16);
+  @include mq(md) {
+      margin-bottom: 0;
+      }
+}
+
+.required {
+  font-size: rem(12);
+  font-weight: $regular;
+  color: $white;
+  background-color: $red;
+  padding: rem(2) rem(16);
+  margin-left: rem(8);
+}
+
+.contact-form__form-input {
+  width: 100%;
+  @include mq(md) {
+      max-width: rem(480);
+  width: 100%;
+      }
+  
+}
+input[type="text"],input[type="email"],input[type="tel"] ,textarea{
+  border: rem(1) solid $greenaccent;
+  width: 100%;
+  padding: rem(8) rem(16);
+}
+
+select {
+  border: rem(1) solid $greenaccent;
+  width: 100%;
+}
+
+.contact-form__form-input select {
+  font-size: rem(12);
+  padding: rem(9) rem(8);
+  position: relative;
+}
+
+.contact-form__form-input select::after {
+  pointer-events: none; /*矢印部分をクリックを可能にする*/
+  position: absolute;
+  color: #666666;
+  top: 50%;
+  left: 6.7em;
+  transform: translateY(-50%); /*▼を上に移動*/
+  content: "▼";
+}
+
+textarea{
+  resize: vertical;
+  height:200px;
+}
+
+::placeholder {
+  font-size: rem(16);
+  font-weight: $regular;
+  color: $green2;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid $greenaccent;
+  vertical-align: -5px;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+        appearance: none;
+}
+
+input[type="checkbox"]:checked:before {
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  transform: rotate(50deg);
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid $red;
+  border-bottom: 2px solid $red;
+  content: '';
+}
+
+.selectbox_area {
+  position: relative;
+}
+.selectbox_area::after {
+  pointer-events: none; /*矢印部分をクリックを可能にする*/
+  position: absolute;
+  color: $greenaccent;
+  top: 50%;
+  right: rem(8);
+  transform: translateY(-50%); /*▼を上に移動*/
+  content: "▼";
+  font-size: rem(12);
+}
+
+.contact-form__btn {
+  text-align: center;
+  margin-left: rem(2);
+}
+
+.contact-form__personal {
+  text-align: center;
+  font-size: rem(14);
+  @include mq(md) {
+      text-align: center;
+      }
+}

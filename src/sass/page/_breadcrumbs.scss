@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.breadcrumbs {
+    font-size: rem(14);
+    color: $green;
+    margin-bottom: rem(40);
+    @include mq("md") {
+        margin-bottom: rem(153);
+    }
+}
+
+.breadcrumbs__list {
+    display: flex;
+}
+
+.breadcrumbs__list li:not(:last-child)::after {
+    content: '>';
+    padding: 0 rem(8);
+    color: $green;
+}
+
+.breadcrumbs__list--404 {
+    color: $white;
+}
+
+.breadcrumbs__list--404 li:not(:last-child)::after {
+    content: '>';
+    padding: 0 rem(8);
+    color: $white;
+}
+

@@ -1,0 +1,220 @@
+@use "global" as *;
+
+.blog-page {
+    position: relative;
+    @include mq("md") {
+    }
+}
+
+.blog-page::before {
+    content: '';
+    position: absolute;
+    top: rem(-120);
+    left: max(0px, 50% - min(48vw, 38.7rem));
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;   
+@include mq("md") {
+content: '';
+position: absolute;
+top: rem(-120);
+left: max(0px, 50% - min(48vw, 38.7rem));
+width: rem(301);
+height: rem(138);
+background-image: url(../images/common/voice_fish.svg);
+background-size: cover;
+background-position: center;
+z-index: -1;   
+}
+}
+
+.blog-page__container {
+    display: block;
+    @include mq(md) {
+        display: flex;
+        }
+}
+
+.blog-page__container-side {
+    @include mq(md) {
+        width: rem(294);
+        margin-left: rem(80);
+        }
+}
+
+
+.blog-page__container-side-box {
+    margin-bottom: rem(80);
+}
+
+.blog-page__container-side-title {
+    font-size: rem(24);
+    font-weight: $regular;
+    color: $green;
+    border-left: rem(8) $greenaccent solid;
+    height: rem(50);
+    position: relative;
+    margin-bottom: rem(24);
+    align-items: center;
+    display: flex;
+    padding-left: rem(80);
+}
+
+.blog-page__container-side-title::before {
+    content: "";
+    background-image: url("/assets/images/common/sidetitle_icon.svg");
+    width: rem(50);
+    height: rem(50);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* 画像全体を表示 */
+    position: absolute;
+    margin-left: rem(16);
+    left: -4px;
+}
+
+.blog-page__container-side-cards:not(:last-child) {
+    margin-bottom: rem(24);
+}
+
+.popularity-card {
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.35);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    padding: rem(16) rem(16) rem(16);
+}
+
+.popularity-card__img {
+    width: rem(121);
+    aspect-ratio: 294 / 218; /* 必要に応じて維持してもOK */
+}
+
+.popularity-card__img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.popularity-card__textbox {
+    margin-left: rem(16);
+}
+
+.blog__textbox-time {
+    font-size: rem(12);
+    font-family: $en-font-family;
+    color: $green;
+}
+
+.popularity-card__textbox-title {
+    font-size: rem(16);
+    margin-top: rem(4);
+    font-weight: $medium;
+}
+
+.blog-page__reviews {
+    margin-bottom: rem(80);
+}
+
+.blog-page__reviews-img {
+    width: 100%;
+    aspect-ratio: 345/ 200;
+    margin-bottom: rem(16);
+}
+
+.blog-page__reviews-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    }
+
+
+
+.blog-page__reviews-subtext {
+    font-size: rem(12);
+    font-weight: $regular;
+    color: $green;
+    margin-bottom: rem(8);
+}
+
+.blog-page__reviews-title {
+    font-size: rem(24);
+    font-weight: $medium;
+    margin-bottom: rem(44);
+}
+
+.blog-page__btn {
+    text-align: center;
+}
+
+.blog-page__archive-list {
+    font-size: rem(24);
+    color: $greenaccent;
+}
+
+
+.blog-page__archive-details {
+    font-size: rem(24);
+    color: $greenaccent;
+}
+
+.blog-page__archive-details {
+
+}
+
+.blog-page__archive-details-title {
+
+}
+
+.blog-page__month {
+
+}
+
+.blog-page__archive-details {
+
+}
+
+.blog-page__archive-details-title {
+
+}
+
+.blog-page__month {
+    
+
+}
+
+.blog-page__month-item {
+    margin-left: rem(25);
+}
+
+.blog-page__day-list {
+
+}
+
+.blog-page__day-item {
+    margin-left: rem(60);
+}
+
+.blog-page__month-item {
+
+}
+
+.blog-page__day-list {
+
+}
+
+.blog-page__day-item {
+
+}
+
+
+
+
+
+
+
+

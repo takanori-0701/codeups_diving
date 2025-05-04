@@ -8,13 +8,6 @@
   }
 }
 
-.information-margin {
-  margin-bottom: rem(82);
-  @include mq("md") {
-    margin-bottom: rem(0);
-  }
-}
-
 .information__title {
   margin-bottom: rem(27);
   @include mq("md") {

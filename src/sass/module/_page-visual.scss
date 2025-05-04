@@ -1,0 +1,44 @@
+@use "global" as *;
+.page-visual {
+    position: relative;
+}
+
+.page-visual__text {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: $white;
+    z-index: 99;
+}
+
+.page-visual__title {
+    font-size: rem(40);
+    font-family: $fb-font-family;
+    font-weight: $normal;
+    line-height: 1.25;
+    text-indent: rem(22);
+    white-space: nowrap;
+    @include mq("md") {
+        font-size: rem(80);
+        text-indent: rem(42);
+    }
+}
+
+.page-visual__subtitle {
+    font-size: rem(20);
+    font-family: $en-font-family;
+    font-weight: $regular;
+}
+
+.page-visual img{
+    object-fit: cover;
+    height: rem(460);
+    aspect-ratio: 375/460;
+    @include mq(md) {
+        height: rem(548);
+        aspect-ratio: 1440/548;
+        }
+
+}

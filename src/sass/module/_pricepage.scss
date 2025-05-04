@@ -1,0 +1,131 @@
+@use "global" as *;
+
+.pricepage {
+    position: relative;
+}
+
+.pricepage__inner {
+    padding: 0 rem(15);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(700);
+    width: 100%;
+    @include mq(md) {
+        padding: 0;
+        }
+}
+
+.pricepage::before {
+    content: '';
+    position: absolute;
+    top: rem(-24);
+    left: max(0px, 50% - min(46vw, 254px));
+    width: rem(120);
+    height: rem(55);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;  
+@include mq("md") {
+    content: '';
+    position: absolute;
+    top: rem(-120);
+    left: max(0px, 50% - min(48vw, 38.7rem));
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;   
+}
+}
+
+.pricepage__table {
+    @include mq(md) {
+        display: flex;
+        }
+}
+
+.pricepage-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.pricepage__table:not(:last-child) {
+    margin-bottom:rem(40);
+    @include mq(md) {
+        margin-bottom: rem(80);
+        }
+}
+
+
+
+.pricepage-table__title {
+    font-size: rem(16);
+    background-color: $greenaccent;
+    color: $white;
+    text-align: center; /* テキストを中央揃え */
+    font-weight: $bold;
+    position: relative;
+    display: flex; /* アイコンとテキストを並べる */
+    justify-content: center; /* 中央揃え */
+    align-items: center; /* 縦方向中央揃え */
+    gap: rem(8); /* アイコンとテキストの間隔 */
+    padding: rem(12); /* 余白 */
+    @include mq(md) {
+        padding: rem(41) rem(44);
+        flex-direction: column-reverse;
+        // margin-bottom: rem(8);
+        }
+}
+
+/* アイコンのスタイル */
+.pricepage-table__title::before {
+    content: "";
+    display: inline-block;
+    width: rem(24); /* アイコンのサイズ */
+    height: rem(24);
+    background-image: url("/assets/images/common/priceicon.svg"); /* アイコンのパス */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* 画像全体を表示 */
+    @include mq(md) {
+        width: rem(64);
+        height: rem(64);
+        }
+}
+
+.pricepage-table__txtbox {
+    // display: flex;
+    border-collapse:  collapse;
+    width: 100%;
+}
+
+.pricdepage-table__price,
+.pricdepage-table__txt {
+    color: $green;
+    border: solid rem(1) $greenaccent;
+    text-align: center;
+}
+
+.pricdepage-table__txt {
+    text-align: center;
+    padding: rem(16) rem(18);
+    text-align: center;
+    @include mq(md) {
+        text-align: left;
+        }
+
+}
+
+.pricdepage-table__price {
+    text-align: center;
+    padding: rem(16) rem(18);
+    width: rem(106);
+    text-align: right;
+    @include mq(md) {
+        width: rem(162);
+        }
+
+}
+

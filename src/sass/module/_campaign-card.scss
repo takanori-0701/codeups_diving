@@ -1,17 +1,7 @@
 @use "global" as *;
 
-.campaign__swiper-container {
-    margin-right: calc(53% - 50vw); /* 親幅を超えるデザインを実現 */
-    margin-bottom: rem(24);
-    // clip-path: inset(0 50vw 0 0);
-    @include mq("md") {
-        margin-bottom: rem(65);
-    }
-}
-
-.campaign-swiper__item {
-    margin-bottom: rem(16);
-
+.blog-page__campaign-cards {
+    margin-bottom: rem(40);
 }
 
 .campaign-card {
@@ -135,11 +125,51 @@
     width: auto;
 }
 
-// .campaign-swiper {
-//     margin-bottom: rem(24);
-//     // clip-path: inset(0 50vw 0 0);
-//     @include mq("md") {
-//         margin-bottom: rem(65);
-//     }
+.campaign-card--blogpage {
+    width: 100%;
+    @include mq(md) {
+        width: 100%;
+        }
+}
+.campaign-card--blogpage:not(:last-child) {
+    margin-bottom: rem(40);
+    @include mq(md) {
+        margin-bottom: rem(40);
+        }
+}
+
+.campaign-card__category-title--blogpage {
+    text-align: center;
+}
+
+.campaign-card__body--blogpage {
+    padding: rem(16) rem(23) rem(24);
+    @include mq(md) {
+        padding: rem(16) rem(23) rem(24);
+        }
+}
+
+.campaign-card__price-up--blogpage {
+    font-size: rem(20);
+    @include mq(md) {
+        font-size: rem(20);
+        }
+}
+
+.campaign-card__price-down--blogpage {
+    font-size: rem(32);
+    @include mq(md) {
+        font-size: rem(32);
+        }
+}
+
+// .campaign-card__text--blogpage {
+//     font-size: rem(14);
+//     @include mq(md) {
+//         rem(14)
+//         }
 // }
 
+.blog-page__single {
+    margin-bottom: rem(40);
+}

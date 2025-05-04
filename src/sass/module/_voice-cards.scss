@@ -14,3 +14,10 @@
     display: flex;
   }
 }
+
+.voice-cards--voice {
+  gap: rem(40);
+  @include mq(md) {
+    gap: rem(80) rem(40);
+      }
+}

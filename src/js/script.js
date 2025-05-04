@@ -172,3 +172,76 @@ function adjustCardHeights() {
 
   // ウィンドウリサイズ時の高さ調整（Swiper外でも対応可能にするため）
 window.addEventListener("resize", adjustCardHeights);
+
+
+
+// voiceタブ切り替え
+// document.addEventListener('DOMContentLoaded', () => {
+//     // タブボタンを全て取得
+//     const tabs = document.querySelectorAll('.voice-btn button');
+  
+//     // タブコンテンツを全て取得
+//     const contents = document.querySelectorAll('.voice-cards .content');
+  
+//     // 各タブボタンにクリックイベントを設定
+//     tabs.forEach((tab, index) => {
+//       tab.addEventListener('click', () => {
+//         // 全てのタブからactiveクラスを削除
+//         tabs.forEach(tab => tab.classList.remove('active'));
+  
+//         // 全てのコンテンツからactiveクラスを削除
+//         contents.forEach(content => content.classList.remove('active'));
+  
+//         // クリックされたタブとそれに対応するコンテンツにactiveクラスを付与
+//         tab.classList.add('active');
+//         contents[index].classList.add('active');
+//       });
+//     });
+//   });
+
+// タブの見出し（tab-item）を取得
+document.addEventListener("DOMContentLoaded", () => {
+    const tabItems = document.querySelectorAll(".tab-list__item");
+    const tabPanels = document.querySelectorAll(".voice-page__tab-panel");
+  
+    tabItems.forEach((tabItem) => {
+      tabItem.addEventListener("click", () => {
+        // タブ非アクティブ化
+        tabItems.forEach((t) => t.classList.remove("active"));
+  
+        // パネル非表示
+        tabPanels.forEach((panel) => panel.classList.remove("active"));
+  
+        // アクティブ化
+        tabItem.classList.add("active");
+  
+        const tabIndex = Array.from(tabItems).indexOf(tabItem);
+        tabPanels[tabIndex].classList.add("active");
+      });
+    });
+  });
+  
+
+  // タブの見出し（tab-item）を取得
+const tabItems = document.querySelectorAll(".tab-item");
+
+tabItems.forEach((tabItem) => {
+  tabItem.addEventListener("click", () => {
+    // すべてのタブを非アクティブにする
+    tabItems.forEach((t) => {
+      t.classList.remove("active");
+    });
+    // すべてのコンテンツを非表示にする
+    const tabPanels = document.querySelectorAll(".tab-panel");
+    tabPanels.forEach((tabPanel) => {
+      tabPanel.classList.remove("active");
+    });
+
+    // クリックされたタブをアクティブにする
+    tabItem.classList.add("active");
+
+    // 対応するコンテンツを表示
+    const tabIndex = Array.from(tabItems).indexOf(tabItem);
+    tabPanels[tabIndex].classList.add("active");
+  });
+});

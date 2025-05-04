@@ -1,0 +1,100 @@
+@use "global" as *;
+
+
+.blog-page__pagination {
+    margin-bottom: rem(80);
+    width: fit-content;
+    margin-inline: auto;
+    @include mq(md) {
+        margin-bottom: 0;
+        }
+}
+
+.pagination__container {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+}
+
+.pagination__item-link {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+width: rem(38);
+height: rem(38);
+background: #fff;
+border: solid 1px $greenaccent;
+font-size: rem(16);
+color: $greenaccent;
+font-weight: bold;
+transition: all 0.15s linear;
+font-family: $fb-font-family;
+}
+
+.pagination__item-link-Icon {
+width: 20px;
+}
+
+.pagination__item-link.isActive {
+background: $greenaccent;
+color: $white;
+pointer-events: none;
+}
+
+.pagination__item-link:not(.isActive):hover {
+background: $greenaccent;
+color: $white;
+}
+
+.pagination > * + * {
+margin-left: 12px;
+}
+
+.pagination__item:first-child {
+margin-right: rem(28); /* 最初の矢印の右に余白 */
+}
+
+.pagination__item:last-child {
+margin-left: rem(28); /* 最後の矢印の左に余白 */
+}
+
+.pagination__item:nth-child(n+6):not(:last-child) {
+    display: none;
+    @include mq(md) {
+        display: block;
+        }
+}
+img.pagination__item-link-icon {
+    width: rem(8);
+}
+
+img.pagination__item-link-icon:hover img {
+    color: #fff; /* ホバー時に白に */
+}
+
+.pagination__item-link.is-prev::before,
+.pagination__item-link.is-next::before {
+content: "";
+display: inline-block;
+width: rem(8);
+height: rem(8);
+border-top: 2px solid $greenaccent;
+border-right: 2px solid $greenaccent;
+transition: border-color 0.2s;
+}
+
+/* ← 左向き矢印（上＋右線を回転） */
+.pagination__item-link.is-prev::before {
+transform: rotate(-135deg);
+}
+
+/* → 右向き矢印（上＋右線を回転） */
+.pagination__item-link.is-next::before {
+transform: rotate(45deg);
+}
+
+/* ホバー時に矢印を白に */
+.pagination__item-link:hover::before {
+border-color: $white;
+}

@@ -193,15 +193,3 @@
   font-family: "Gotu", sans-serif;
 }
 
-.br-sp {
-  @include mq("md") {
-    display: none;
-  }
-}
-
-.lh {
-  line-height: 1.3;
-  @include mq("md") {
-    line-height: 1.5;
-  }
-}

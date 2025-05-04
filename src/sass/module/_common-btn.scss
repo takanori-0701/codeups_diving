@@ -48,9 +48,7 @@
   border-bottom: rem(1) solid $greenaccent; // ホバー時に緑色に変更
   border-right: rem(1) solid $greenaccent; // ホバー時に緑色に変更
   }
-
 }
-
 .common-btn::after {
   background: #ffffff;
   position: absolute;
@@ -70,6 +68,48 @@
   }
 }
 .common-btn:hover::after {
+  @include mq("md") {
+    transform: scale(1, 1);
+  }
+}
+
+.common-btn--404 {
+  border: rem(1) solid $white;
+  background: $white;
+  color: $greenaccent;
+
+}
+.common-btn--404::before {
+  position: absolute;
+  top: 0.2rem;
+  border: 1px solid $white;
+  bottom: -0.25rem;
+  content: "";
+  left: rem(5);
+  right: rem(-5);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.common-btn__arrow--404 {
+  border-bottom: rem(1) solid $greenaccent;
+  border-right: rem(1) solid $greenaccent;
+}
+.common-btn--404:hover .common-btn__arrow {
+  @include mq("md") {
+  border-bottom: rem(1) solid $white; // ホバー時に緑色に変更
+  border-right: rem(1) solid $white; // ホバー時に緑色に変更
+  }
+}
+.common-btn--404::after {
+  background: $greenaccent;
+}
+.common-btn--404:hover {
+  @include mq("md") {
+    color: $white;
+  }
+}
+.common-btn--404:hover::after {
   @include mq("md") {
     transform: scale(1, 1);
   }

@@ -1,19 +1,5 @@
 @use "global" as *;
     
-.campaign__swiper-button {
-  display: none;
-  @include mq("md") {
-    justify-content: right;
-    display: flex;
-  }
-}
-
-.campaign__swiper-button__inner {
-  position: relative;
-  top:rem(-45);
-  width: rem(261);
-  left: rem(10);
-}
 
 /* 左矢印ボタン */
 .swiper-button-prev {
@@ -49,7 +35,6 @@
 .swiper-button-next:hover{
   background:  rgba(64, 143, 149, 0.7);
 }
-
 
 /* 矢印アイコン */
 .swiper-button-prev::before,

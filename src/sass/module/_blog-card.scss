@@ -12,9 +12,12 @@
   } 
 }
 
-.blog-card:hover {
+
+//カードにマウスオンで画像のみ拡大
+.blog-card:hover .blog-card__img img {
   @include mq("md") {
-    transform: translateY(-0.5em);
+  transform: scale(1.2);
+  transition: all 0.3s ease;
   }
 }
 
@@ -24,13 +27,17 @@
 
 .blog-card__img {
   margin-bottom: rem(17);
+  overflow:hidden;
 }
+
+
 
 .blog-card__img img {
   width: 100%;              // 親要素に合わせて幅を100%に拡張
   height: auto;             // 必要に応じて高さを調整
   aspect-ratio: 301 / 201;     // アスペクト比を指定（例：16:9）
   object-fit: cover;        // 親要素に合わせてフィットし、アスペクト比を保持
+  transition: all 0.3s ease; 
 }
 
 .blog-card__textbox time {
