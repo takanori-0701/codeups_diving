@@ -245,3 +245,41 @@ tabItems.forEach((tabItem) => {
     tabPanels[tabIndex].classList.add("active");
   });
 });
+
+
+//モーダル
+$(".gallery__item .gallery__img").click(function () {
+    var src = $(this).attr("src");
+    var cap = $(this).attr("alt");
+    $(".modal-block").fadeIn().css("display", "flex");
+
+$("#popup").attr("src", src);
+$(".caption").text(cap);
+});
+
+$(".modal-block").click(function (e) {
+// モーダルの外側をクリックした場合にのみモーダルを閉じる
+if (e.target === this) {
+    $(this).css("display", "none");
+}
+});
+
+$(".img-section > span").click(function () {
+// モーダルを閉じるボタンがクリックされた場合にモーダルを閉じる
+$(".modal-block").css("display", "none");
+});
+
+
+//モーダル
+
+$(".gallery__item .gallery__img").click(function () {
+    var src = $(this).attr("src");
+    var cap = $(this).attr("alt"); // キャプションとしてaltを利用
+
+    $(".modal-block").fadeIn().css("display", "flex");
+
+    // 画像とaltをモーダルに設定
+    $("#popup").attr("src", src).attr("alt", cap); // ← altを必ずセット！
+
+    $(".caption").text(cap);
+});

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .voice-page {
-    position: relative;
+  position: relative;
 
 }
 
@@ -14,183 +14,114 @@
 }
 
 .voice-page::before {
-    content: '';
-    position: absolute;
-    top: rem(-120);
-    left: max(0px, 50% - min(48vw, 38.7rem));
-    width: rem(301);
-    height: rem(138);
-    background-image: url(../images/common/voice_fish.svg);
-    background-size: cover;
-    background-position: center;
-    z-index: 500;   
+  content: '';
+  position: absolute;
+  top: rem(-120);
+  left: max(0px, 50% - min(48vw, 38.7rem));
+  width: rem(301);
+  height: rem(138);
+  background-image: url(../images/common/voice_fish.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: 500;   
 @include mq("md") {
-    content: '';
-    position: absolute;
-    top: rem(-120);
-    left: max(0px, 50% - min(48vw, 38.7rem));
-    width: rem(301);
-    height: rem(138);
-    background-image: url(../images/common/voice_fish.svg);
-    background-size: cover;
-    background-position: center;
-    z-index: 500;   
+  content: '';
+  position: absolute;
+  top: rem(-120);
+  left: max(0px, 50% - min(48vw, 38.7rem));
+  width: rem(301);
+  height: rem(138);
+  background-image: url(../images/common/voice_fish.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: 500;   
 }
 }
-.voice-page__cards {
-    
+
+.voice-page__tab_btn {
+  display: grid;
+  grid-template-columns: repeat(2, rem(162));
+  gap: rem(21) rem(16);
+  margin-bottom: rem(40);
+  @include mq("md") {
+    grid-template-columns: repeat(4, rem(162));
+    gap: rem(32);
+  }
 }
 
-.voice-page__inner {
-
-}
-
-.voice-tab__box {
-    margin-bottom: rem(40);
-}
-
-.voice-page__tab-lists {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: rem(16) rem(20);
-    @include mq(md) {
-        grid-template-columns: 162px 162px 162px 162px;
-        }
-}
-
-.tab-list__item.active {
-    z-index: 1000;
-    font-size: rem(14);
-    line-height: calc(22px / 14px * 1rem);
-    border: solid 1px $greenaccent;
-    display: inline-block;
-    padding: rem(6) 0;
-    color: $greenaccent;
-    transition: all 0.3s ease-in-out 0s;
-    text-align: center;
-    background: $white;
-    @include mq(md) {
-        width: rem(162);
-        }
-}
-.tab-list__item:hover {
-    background: $greenaccent;
-    color: $white;
-}
-
-
-
-
-.voice-page__tab-panel {
+  input {
     display: none;
-    padding: 20px 0;
-    animation: fadeIn 0.3s ease-in-out;
   }
-  
-  .voice-page__tab-panel .active {
+
+  .voice-page__tab_menu {
+    padding: rem(6) 0;
+    border: solid 1px $greenaccent;
+    text-align: center;
+    font-size: rem(14);
+    font-weight: $regular;
+    color: $greenaccent;
+    background-color: $white;
     display: block;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  .voice-page__tab_btn input {
+    display: none;
   }
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
+  .voice-page__tab_menu {
+    // 通常状態
+    padding: rem(6) 0;
+    border: 1px solid $greenaccent;
+    background-color: $white;
+    color: $greenaccent;
+    text-align: center;
+    display: block;
+    transition: 0.2s;
+  
+    &:hover {
+      opacity: 0.75;
     }
   }
+  
+  /* チェックされてる input に対応する label の色変更 */
+  input#menu01:checked ~ .voice-page__tab_btn label[for="menu01"],
+  input#menu02:checked ~ .voice-page__tab_btn label[for="menu02"],
+  input#menu03:checked ~ .voice-page__tab_btn label[for="menu03"],
+  input#menu04:checked ~ .voice-page__tab_btn label[for="menu04"] {
+    background-color: $greenaccent;
+    color: #fff;
+  }
 
-
-
-
-.voice-cards {
-
-}
-
-.voice-cards__item {
-
-}
-
-.voice-card {
-
-}
-
-.voice-card__content {
-
-}
-
-.voice-card__taitle_img_box {
-
-}
-
-.voice-card__taitle_data {
-
-}
-
-.voice-card__deta {
-
-}
-
-.voice-card__deta-age {
-
-}
-
-.voice-card__deta-tag {
-
-}
-
-.voice-card__title {
-
-}
-
-.voice-card__img {
-
-}
-
-.colorbox {
-
-}
-
-.voice-card__text {
-
-}
-
-.tabs {
-  max-width: 500px;
-  margin: 10% auto;
-}
-
-.tab-list {
-  display: flex;
-}
-
-.tab-item {
-  border-radius: 5px 5px 0 0;
-  background-color: #fff;
-  border: solid 1px skyblue;
-  padding: 0.5em 1.2em;
-  cursor: pointer;
-}
-
-.tab-content {
-  background-color: #f5f5f5;
-}
-
-.tab-panel {
+// 各タブの内容を表示する条件（id名を "contentXX" にしているので注意）
+.voice-page__tab_contents {
   display: none;
 }
 
-.tab-item.active {
-  background-color: skyblue;
-  color: #fff;
-  font-weight: bold;
+#menu01:checked ~ #content01,
+#menu02:checked ~ #content02,
+#menu03:checked ~ #content03,
+#menu04:checked ~ #content04 {
+  display: block;
 }
 
-.tab-panel.active {
-  display: block;
-  padding: 3%;
+.voice-page__cards {
+  margin-bottom: rem(80);
+  @include mq("md") {
+    margin-bottom: rem(72);
+    margin-bottom: rem(72);
+  }
 }
-.tab-panel.active h2 {
-  font-size: 20px;
-  font-weight: bold;
+
+.voice-page__pagination {
+  margin-bottom: rem(40);
+  display: flex;
+  justify-content: center;
+  @include mq("md") {
+    margin-bottom: rem(80);
+  }
 }

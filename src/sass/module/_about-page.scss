@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.about-page {
+    position: relative;
+}
+
+.about-page__inner {
+    padding: 0 rem(15);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(700);
+    width: 100%;
+    @include mq(md) {
+        padding: 0;
+        }
+}
+
+.about-page::before {
+    content: '';
+    position: absolute;
+    top: rem(-24);
+    left: max(0px, 50% - min(46vw, 254px));
+    width: rem(120);
+    height: rem(55);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;  
+@include mq("md") {
+    content: '';
+    position: absolute;
+    top: rem(-120);
+    left: max(0px, 50% - min(48vw, 38.7rem));
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/voice_fish.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 500;   
+}
+}

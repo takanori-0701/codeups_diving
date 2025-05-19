@@ -24,14 +24,14 @@
 }
 
 .blog-single__img {
-  width: 100%;
-  aspect-ratio: 345/ 231;
-  margin-bottom: rem(24);
+width: 100%;
+aspect-ratio: 345/ 231;
+margin-bottom: rem(24);
 }
 .blog-single__img img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+width: 100%;
+height: auto;
+object-fit: cover;
 }
 
 .blog-single__text:not(:last-child) {

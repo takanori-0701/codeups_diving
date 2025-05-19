@@ -1,0 +1,156 @@
+@use "global" as *;
+
+.information-page {
+  position: relative;
+
+}
+
+.information-page__inner {
+
+}
+
+.inner {
+
+}
+
+.information-page::before {
+  content: '';
+  position: absolute;
+  top: rem(-120);
+  left: max(0px, 50% - min(48vw, 38.7rem));
+  width: rem(301);
+  height: rem(138);
+  background-image: url(../images/common/voice_fish.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: 500;   
+@include mq("md") {
+  content: '';
+  position: absolute;
+  top: rem(-120);
+  left: max(0px, 50% - min(48vw, 38.7rem));
+  width: rem(301);
+  height: rem(138);
+  background-image: url(../images/common/voice_fish.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: 500;   
+}
+}
+
+.information-page__tab_btn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(19) ;
+  margin-bottom: rem(40);
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(90);
+  }
+}
+
+  input {
+    display: none;
+  }
+
+  .information-page__tab_menu {
+  padding: rem(13) 0; // rem(6)とrem(13)の重複は大きい方を採用
+  background-color: $green2;
+  color: $greenaccent;
+  text-align: center;
+  font-size: rem(14);
+  font-weight: $regular;
+  display: block;
+  transition: all 0.2s ease;
+
+  @include mq(md) {
+    font-size: rem(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.information-page__tab_menu:hover {
+      opacity: 0.75;
+    }
+
+.information-page__tab_menu span{
+  position: relative;
+  z-index: 1
+}
+
+// .information-page__sidetitle-icon {
+//   display: none;
+//   width: rem(64);
+//   @include mq(md) {
+//     display: block;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     content: "";
+//     height: rem(64);
+//     width: rem(64);
+//     left: -4px;
+//     margin-left: 1rem 16px;
+//     position: absolute;
+//     }
+// }
+
+.information-page__sidetitle-icon {
+  display: none;
+  width: rem(64);
+  @include mq(md) {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: rem(64);
+    width: rem(64);
+    left: -4px;
+    margin-left: 1rem 16px;
+    position: absolute;
+  }
+}
+
+  .information-page__tab_btn input {
+    display: none;
+  }
+  
+
+  
+input#menu01:checked ~ .information-page__tab_btn label[for="menu01"],
+input#menu02:checked ~ .information-page__tab_btn label[for="menu02"],
+input#menu03:checked ~ .information-page__tab_btn label[for="menu03"],
+input#menu04:checked ~ .information-page__tab_btn label[for="menu04"] {
+  background-color: $greenaccent;
+  color: #fff;
+}
+
+input#menu01:checked ~ .information-page__tab_btn label[for="menu01"] .information-page__sidetitle-icon,
+input#menu02:checked ~ .information-page__tab_btn label[for="menu02"] .information-page__sidetitle-icon,
+input#menu03:checked ~ .information-page__tab_btn label[for="menu03"] .information-page__sidetitle-icon,
+input#menu04:checked ~ .information-page__tab_btn label[for="menu04"] .information-page__sidetitle-icon {
+  filter: brightness(0) invert(1);
+}
+
+// 各タブの内容を表示する条件（id名を "contentXX" にしているので注意）
+.information-page__tab_contents {
+  display: none;
+}
+
+#menu01:checked ~ #content01,
+#menu02:checked ~ #content02,
+#menu03:checked ~ #content03,
+#menu04:checked ~ #content04 {
+  display: block;
+}
+
+.information-page__cards {
+  margin-bottom: rem(80);
+  @include mq("md") {
+    margin-bottom: rem(72);
+    margin-bottom: rem(72);
+  }
+}

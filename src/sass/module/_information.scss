@@ -68,3 +68,17 @@
 .information__btn {
   text-align: center;
 }
+
+.information-cards--information {
+  border: solid 1px $greenaccent;
+  padding: 24px;
+}
+
+.information__content--information {
+  display: flex;
+  flex-direction: column-reverse;
+  @include mq("md") {
+    flex-direction: row;
+  }
+}
+
